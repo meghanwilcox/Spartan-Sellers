@@ -39,6 +39,22 @@ header{
     width: 30%;
 }
 
+.login-btn{
+    border: 5px solid blue;
+    background-color: white;
+    padding: 5px;
+    font-size: 14pt;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.login-btn:hover{
+    background-color: rgb(224, 224, 131);
+    cursor: pointer;
+}
+
 hr{
     width: 100%;
     height: 5px;
@@ -49,7 +65,7 @@ hr{
     margin-top: 13px;
     margin-bottom: 10px;
     font-size: 35pt;
-    background-color: rgb(135, 167, 243);
+    background-color: white;
     border: 5px solid blue;
     border-radius: 20px;
     padding: 20px;
@@ -73,8 +89,6 @@ hr{
     align-items: center;
     text-align: center;
 }
-
-
 
 #profile-email-container{
     display: flex;
