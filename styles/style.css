@@ -1,16 +1,32 @@
-html {
+html, .nav-bar, .nav-bar:hover{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
     display: flex;
-    flex-direction: row;
-    width: 100%;
     justify-content: space-evenly;
+    width: 100%;
+}
+
+#profile-pic{
+    margin-top: 15px;
+    width: 100px;
+}
+
+#profile-pic:hover{
+    cursor: pointer;
+}
+
+#logo{
+    width: 300px;
+    margin-left: 0px;
+}
+
+#logo:hover{
+    cursor: pointer;
 }
 
 #login-container {
-    border: 5px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,12 +36,28 @@ header{
 }
 
 #login-pic {
-    width: 200px;
-    height: 200px;
+    width: 30%;
+}
+
+hr{
+    width: 100%;
+    height: 5px;
+    background-color: blue;
 }
 
 .nav-bar{
-    width: 22%;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: 35pt;
+    background-color: rgb(135, 167, 243);
+    border: 5px solid blue;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.nav-bar:hover{
+    cursor: pointer;
+    background-color: rgb(224, 224, 131);
 }
 
 #container{
