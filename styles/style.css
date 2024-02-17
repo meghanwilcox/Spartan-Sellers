@@ -67,3 +67,19 @@ header{
     margin-bottom: 25px;
 }
 
+#items-to-be-approved-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-to-be-approved{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    border: 5px solid gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
