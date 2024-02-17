@@ -2,8 +2,11 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    /* background-color: rgb(255, 251, 130); */
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 #login-container {
@@ -14,11 +17,53 @@ body {
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-
 }
 
 #login-pic {
     width: 200px;
     height: 200px;
+}
+
+.nav-bar{
+    width: 22%;
+}
+
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20px;
+}
+
+#profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+#profile-email-container{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+#text-box{
+    width: 30%;
+}
+
+#listed-items-container{
+    width: 75%;
+}
+
+.listed-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 5px solid gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
