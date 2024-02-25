@@ -155,10 +155,17 @@ input.search_bar:hover{
 }
 
 #listed-items-container{
+    display: flex;
+    margin-left: 11%;
+    margin-right: 10%;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
     width: 75%;
 }
 
 .listed-item{
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,17 +204,22 @@ input.search_bar:hover{
     cursor: pointer;
 }
 
-#profile-btn, #pricing-btn{
+#profile-btn, #pricing-btn, #reviews-btn{
     background-color: white;
     border: 5px solid blue;
-    width:  40%;
     height: 35px;
     border-radius: 20px;
     margin-top: 15px;
     font-size: 14pt;;
 }
+#profile-btn{
+    width: 40%;
+}
+#pricing-btn{
+    width: 20%;
+}
 
-#profile-btn:hover, #pricing-btn:hover{
+#profile-btn:hover, #pricing-btn:hover, #reviews-btn:hover{
     background-color: rgb(224, 224, 131);
     cursor: pointer;
 }
