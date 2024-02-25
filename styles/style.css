@@ -228,7 +228,7 @@ input.search_bar:hover{
     width: 40%;
 }
 #pricing-btn{
-    width: 20%;
+    width: 10%;
 }
 
 .btn:hover, #profile-btn:hover, #pricing-btn:hover, #reviews-btn:hover{
@@ -274,8 +274,9 @@ input.search_bar:hover{
 
 #reviews-container{
     padding: 40px;
-    border: 5px solid red;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .review{
@@ -288,6 +289,10 @@ input.search_bar:hover{
     padding-top: 15px;
     padding-bottom: 15px;;
     border-radius: 20px;
+}
+
+.review img{
+    width: 100%;
 }
 
 footer{
