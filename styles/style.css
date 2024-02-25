@@ -265,6 +265,13 @@ input.search_bar:hover{
     font-size: 18pt;
 }
 
+#pricing-data-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+}
+
 footer{
     height: 75px;
     text-align: center;
