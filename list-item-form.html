@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spartan Sellers: Seller</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+        </div>
+        
+        <div>
+            <button class="nav-bar" onclick="window.location.href='main-buyer.html'">BUYER</button>
+        </div>
+        
+        <div>
+            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-seller.html'">SELLER</button>
+        </div>
+        
+        <div>
+            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
+        </div>
+        
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>List an Item to Sell</h1>
+
+        <form id="list-item-form">
+            <div>
+                <label for="item-title">Item Title: </label>
+                <input type="text" id="item-title" name="item-title" size="30" required>
+                <br>
+            </div>
+            <br>
+            
+            <div>
+                <label for="item-description">Item Description: </label>
+                <textarea id="item-description" name="item-description"></textarea>
+                <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="item-photo-upload">Select Photos:</label>
+                <input type="file" id="item-photo-upload" name="item-photo-upload" required>
+                <br>
+            </div>
+            <br>
+
+
+            <label for="item-category-select">Select Item Category:</label>
+            <select id="item-category-selct">
+                <option value="">Select a Category</option>
+                <option value="option1">Dorm Supplies</option>
+                <option value="option2">Textbooks</option>
+                <option value="option3">Transportation</option>
+                <option value="option3">School Supplies</option>
+                <option value="option3">Miscellaneous</option>
+            </select>
+            <br>
+
+            <label for="item-condition-select">Select Item Condition:</label>
+            <select id="item-condition-selct" required>
+                <option value="">Select a Condition</option>
+                <option value="option1">New</option>
+                <option value="option2">Used - Like New</option>
+                <option value="option2">Used - Good</option>
+                <option value="option3">Used - Mild</option>
+                <option value="option3">Used - Poor</option>
+            </select>
+            <br>
+
+            <div>
+                <label for="item-price">Item Price:</label>
+                <input type="text" id="item-price" name="item-price" size="30" required>
+                <br>
+            </div>
+            <br>
+
+            <div id="item-submission-container">
+                <button class="btn" id="cancel-list-item" onclick="window.location.href='main-seller.html'">Cancel</button>
+
+                <div>
+                    <label for="list-item-reset">Reset Form Entries</label>
+                    <input class="btn" type="reset" id="list-item-reset" name="list-item-reset">
+                    <br>
+                </div>
+            
+                <div>
+                    <label for="list-item-submit">Submit Listing for Approval</label>
+                    <input class="btn" type="submit" id="list-item-submit" onclick="window.location.href='main-seller.html'" name="list-item-submit">
+                    <br>
+                </div>
+                
+            </div>
+            
+    
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div id="container">
+            <button id="list-item-btn">List an Item</button>
+            <button id="pricing-btn">View Historic Pricing Data</button>
+            <button id="reviews-btn">Reviews</button>
+        </div>
+
+        <div id="listed-items-container">
+            <h3>Listed Items</h3>
+            <h5>click an item to view item details</h5>
+            <div class="listed-item">
+                    <div class="listed-item-title">Brass Desk Lamp</div>
+                    <div class="listed-item-price">$15.50</div>
+                    <div class="listed-item-status">FOR SALE</div>
+            </div>
+
+            <div class="listed-item">
+                <div class="listed-item-title">Calculus Textbook</div>
+                <div class="listed-item-price">$30.00</div>
+                <div class="listed-item-status">SOLD</div>
+            </div>
+        </div> -->
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+    
+</body>
+
+</html>

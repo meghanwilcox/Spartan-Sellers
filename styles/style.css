@@ -8,12 +8,15 @@ header{
     width: 100%;
 }
 
+h1, h3, h5{
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+}
+
 #profile-pic{
     margin-top: 15px;
     width: 100px;
 }
-
-
 
 #profile-pic:hover{
     cursor: pointer;
@@ -162,17 +165,26 @@ input.search_bar:hover{
     flex-direction: column;
     align-items: center;
     width: 75%;
+    font-size: 18pt;
 }
 
 .listed-item{
     width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border: 5px solid gray;
+    justify-content: space-evenly;
+    border: 5px solid blue;
     margin-top: 25px;
     margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 20px;
 }
+
+.listed-item:hover{
+    background-color: rgb(224, 224, 131);
+    cursor: pointer;
+}
+
 
 #items-to-be-approved-list-container{
     display: flex;
@@ -219,11 +231,39 @@ input.search_bar:hover{
     width: 20%;
 }
 
-#profile-btn:hover, #pricing-btn:hover, #reviews-btn:hover{
+.btn:hover, #profile-btn:hover, #pricing-btn:hover, #reviews-btn:hover{
     background-color: rgb(224, 224, 131);
     cursor: pointer;
 }
 
+.listed-item-pic{
+    width: 20%;
+    border-radius: 20px;;
+
+}
+
+#list-item-form{
+    font-size: 18pt;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+}
+
+#item-submission-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 50px 50px 50px;
+}
+
+.btn{
+    background-color: white;
+    border: 5px solid blue;
+    border-radius: 20px;
+    font-size: 18pt;
+}
 
 footer{
     height: 75px;
