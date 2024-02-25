@@ -272,6 +272,24 @@ input.search_bar:hover{
     font-size: 18pt;
 }
 
+#reviews-container{
+    padding: 40px;
+    border: 5px solid red;
+
+}
+
+.review{
+    font-size: 18pt;
+    border: 5px solid blue;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;;
+    border-radius: 20px;
+}
+
 footer{
     height: 75px;
     text-align: center;
