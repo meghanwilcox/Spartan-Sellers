@@ -2,50 +2,119 @@
 <html lang="en">
 
 <head>
-    <title>Spartan Sellers: Buyer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <meta charset="utf-8">
+    <script src="script-buyer.js"></script>
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <title>Spartan Sellers: Buyer</title>
+
 </head>
 
 <body>
 
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+            <a href="main-buyer.html">
+                <img src="images/logo.jpg.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);"window.location.href='main-buyer.html'">BUYER</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-seller.html'">SELLER</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="main-profile-reg-user.html"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <a href="main-seller.html" class="nav-button">Sell</a>
+        </nav>
     </header>
 
-    <hr>
 
     <main>
-        <div id="container">
-            <h2>Browse items for sale</h2>
-            <div>
-                <input type="text" class="search_bar" placeholder="Search">
-                <button onclick="window.location.href='search-results.html'" id="search-btn">🔍</button>
-            </div>
-            <select name="pets" id="category-select">
+
+        <!-- <select name="pets" id="category-select">
                 <option value="">Select a Category</option>
                 <option value="Dorm">Dorm Supplies</option>
                 <option value="cat">Textbooks</option>
                 <option value="hamster">Transportation</option>
                 <option value="parrot">School Supplies</option>
-            </select>
+            </select> -->
+
+        <div id="container">
+
+            <div>
+                <div class="search-container">
+                    <a href="search-results.html">
+                        <i class="fas fa-search search-icon"></i>
+                    </a>
+                    <input type="text" class="search-bar" placeholder="Search" onkeydown="handleSearch(event)">
+                </div>
+            </div>
+
+            <ul class="category-list" id="sortable-list">
+                <li class="category-item" onclick="sortItems('Category 1')">
+                    <div class="category-item-text">
+                    Dorm Supplies
+                </div>
+                    <i class="fa-solid fa-bed cat-icon"></i>
+                </li>
+                <li class="category-item" onclick="sortItems('Category 2')">
+                    <div class="category-item-text">
+                    Textbooks
+                </div>
+                    <i class="fa-solid fa-book cat-icon"></i>
+                </li>
+                <li class="category-item" onclick="sortItems('Category 3')">
+                    <div class="category-item-text">
+                    School Supplies
+                </div>
+                    <i class="fa-solid fa-pencil cat-icon"></i>
+                </li>
+                <li class="category-item" onclick="sortItems('Category 4')">
+                    <div class="category-item-text">
+                    Apparal
+                </div>
+                    <i class="fa-solid fa-shirt cat-icon"></i>
+                </li>
+                <li class="category-item" onclick="sortItems('Category 5')">
+                    <div class="category-item-text">
+                    View All
+                </div>
+                <i class="fa-solid fa-tag"></i>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="p-container">
+
+            <div class="product">
+                <img src="images/textbook.jpg" alt="Database Processing Textbook">
+                <a href="product-one.html"><button class="view-item-btn">View Item</button></a>
+                <h3>Database Processing Textbook</h3>
+                <p>Price: $7.00</p>
+                <button class="add-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+
+            </div>
+
+            <div class="product">
+                <img src="images/calc.jpg" alt="Product 2">
+                <a href="product-two.html"><button class="view-item-btn">View Item</button></a>
+                <h3> TI-84 Plus CE Calculator</h3>
+                <p>Price: $15.00</p>
+                <button class="add-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+
+                <img src="images/pens.jpg" alt="Product 3">
+                <a href="product-three.html"><button class="view-item-btn">View Item</button></a>
+                <h3>Zebra Mildliner Highlighter Pens</h3>
+                <p>Price: 3.00</p>
+                <button class="add-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+
+        </div>
         </div>
     </main>
+
 
     <footer>
         <p>Copyright © 2024 Spartan Sellers</p>
