@@ -18,7 +18,7 @@
         </div>
         
         <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" window.location.href='main-seller.html'">SELLER</button>
+            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-seller.html'">SELLER</button>
         </div>
         
         <div>
@@ -31,9 +31,27 @@
 
     <main>
         <div id="container">
-            <button id="list-item-btn">List an Item</button>
-            <button id="pricing-btn">View Historic Pricing Data</button>
+            <button id="list-item-btn" onclick="window.location.href='list-item-form.html'">List an Item</button>
+            <button id="pricing-btn" onclick="window.location.href='view-pricing-data.html'">View Pricing Data</button>
+            <button id="reviews-btn" onclick="window.location.href='seller-reviews.html'">Reviews</button>
         </div>
+
+        <div id="listed-items-container">
+            <h3>Listed Items</h3>
+            <h5>click an item to view item details</h5>
+            <div class="listed-item">
+                    <div class="listed-item-title">Brass Desk Lamp</div>
+                    <div class="listed-item-price">$15.50</div>
+                    <div class="listed-item-status">FOR SALE</div>
+            </div>
+
+            <div class="listed-item">
+                <div class="listed-item-title">Calculus Textbook</div>
+                <div class="listed-item-price">$30.00</div>
+                <div class="listed-item-status">SOLD</div>
+        </div>
+        </div>
+
     </main>
 
     <footer>

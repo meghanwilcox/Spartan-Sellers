@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spartan Sellers: Seller</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+        </div>
+        
+        <div>
+            <button class="nav-bar" onclick="window.location.href='main-buyer.html'">BUYER</button>
+        </div>
+        
+        <div>
+            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-seller.html'">SELLER</button>
+        </div>
+        
+        <div>
+            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
+        </div>
+        
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>View Pricing Data - All</h1>
+
+        <div id="pricing-data-container">
+            <label for="item-category-select">Filter by Category:</label>
+            <select id="item-category-selct">
+                <option value="">Select a Category</option>
+                <option value="option1">Dorm Supplies</option>
+                <option value="option2">Textbooks</option>
+                <option value="option3">Transportation</option>
+                <option value="option3">School Supplies</option>
+                <option value="option3">Miscellaneous</option>
+            </select>
+            <br>
+
+            <div>
+                Number of Items Listed: 100
+            </div>
+            <br>
+
+            <div>
+                Number of Items Sold: 20
+            </div>
+            <br>
+
+            <div>
+                Average Price: $15.00
+            </div>
+            <br>
+
+            <div>
+                Highest Price: $112.00
+            </div>
+            <br>
+
+            <div>
+                Lowest Price: $3.00
+            </div>
+            <br>
+            
+            <button class="btn" onclick="window.location.href='main-seller.html'">Back to Seller </button>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+    
+</body>
+
+</html>
