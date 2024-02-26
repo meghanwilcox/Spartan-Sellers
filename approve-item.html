@@ -7,41 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Approve Item</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
 </head>
 
 <body>
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-admin.html'"src="images/logo.jpg.png">
+            <a href="main-buyer.html">
+                <img src="images/logo.jpg.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='admin-item-approval.html'">APPROVALS</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='users-list-admin.html'">USERS</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-admin.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="index.html"> Logout</a>
+            <a href="main-admin.html" class="nav-button">Listings</a>
+            <a href="users-list-admin.html" class="nav-button">Users</a>
+        </nav>
     </header>
+
+
     <h1>Approve or Deny Item</h1>
     <button onclick="approveItem()">Approve</button>
     <button onclick="denyItem()">Deny</button>
 
+    <main class="product-details">
+        <img id="pd-img" src="images/textbook.jpg" alt="Product Image">
+        <div>
+            <h1>Database Processing Textbook</h1>
+
+
+            <h2>Price: $7.00</h2>
+
+           
+
+            <div class="product-info">
+                <h2>Seller Information</h2>
+                <p>Seller: John Doe</p>
+                <p>Rating: 4.5/5</p>
+            </div>
+
+            <div class="product-info">
+                <h2>Product Information</h2>
+
+                <p>Description: Database Processing: Fundamentals, Design & Implementation
+                    by David M. Kroenke Seventh Editon</p>
+
+                <p>Brand: Prentice Hall</p>
+
+                <p>Condition: Used</p>
+
+                <p>Category: Textbooks</p>
+
+                <p>Date Posted: 2/26/2024</p>
+            </div>
+
+
+        </div>
+    </main>
+
     <script>
         function approveItem() {
             alert("Item approved!");
-            // You can redirect the user to another page after approval if needed
             window.location.href = "approved.html";
         }
 
         function denyItem() {
             alert("Item denied!");
-            // You can redirect the user to another page after denial if needed
+
             window.location.href = "denied.html";
         }
     </script>

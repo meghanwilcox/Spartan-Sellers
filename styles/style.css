@@ -542,3 +542,15 @@ button {
     color: blue;
 }
 
+.remove-button{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
+}

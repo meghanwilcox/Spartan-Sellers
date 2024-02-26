@@ -6,28 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Approved</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
 </head>
 
 <body>
     <div class="message-container">
         <header>
             <div>
-                <img id="logo" onclick="window.location.href='main-admin.html'"src="images/logo.jpg.png">
+                <a href="main-buyer.html">
+                    <img src="images/logo.jpg.png" alt="Logo" class="logo">
+                </a>
             </div>
-            
-            <div>
-                <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='admin-item-approval.html'">APPROVALS</button>
-            </div>
-            
-            <div>
-                <button class="nav-bar" onclick="window.location.href='users-list-admin.html'">USERS</button>
-            </div>
-            
-            <div>
-                <img id="profile-pic" onclick="window.location.href='main-profile-admin.html'" src="images/profile.jpg.png">
-            </div>
-            
+            <nav>
+                <a class="profile" href="index.html"> Logout</a>
+                <a href="main-admin.html" class="nav-button">Listings</a>
+                <a href="users-list-admin.html" class="nav-button">Users</a>
+            </nav>
         </header>
+    
         <h1>Item Approved</h1>
         <p>The item has been approved and the seller has been notified.</p>
         <a href="main-admin.html" class="back-btn">Go Back to Main Admin Page</a>

@@ -5,45 +5,36 @@
     <title>Spartan Sellers: Admin</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
 </head>
 
 <body>
 
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-admin.html'"src="images/logo.jpg.png">
+            <a href="main-buyer.html">
+                <img src="images/logo.jpg.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-admin.html'">APPROVALS</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='users-list-admin.html'">USERS</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-admin.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="index.html"> Logout</a>
+            <a href="main-admin.html" class="nav-button">Listings</a>
+            <a href="users-list-admin.html" class="nav-button">Users</a>
+            
+        </nav>
     </header>
+
 
     <hr>
 
     </main>
-    <div id="items-to-be-approved-list-container">
+   
         <div class="item-to-be-approved">
             <div class="item-to-be-approved-title">
-                item 1 name
+                Database Processing Textbook
             </div>
             <a href="approve-item.html">VIEW</a>
-        </div>
-    
-        <div class="item-to-be-approved">
-            <div class="item-to-be-approved-title">
-                item 2 name
-            </div>
-            <a href="approve-item.html">VIEW</a>
+
         </div>
     </div>
     
