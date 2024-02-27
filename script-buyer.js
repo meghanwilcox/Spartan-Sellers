@@ -29,3 +29,15 @@ function searchResults() {
         window.location.href = 'search-results.html?query=' + encodeURIComponent(searchTerm);
     }
 }
+
+function lightUpStars(rating) {
+    const stars = document.querySelectorAll('.stars-big .star');
+    
+    for (let i = 0; i < rating; i++) {
+        stars[i].style.color = 'gold';
+    }
+
+    for (let i = rating; i < stars.length; i++) {
+        stars[i].style.color = 'black';
+    }
+}

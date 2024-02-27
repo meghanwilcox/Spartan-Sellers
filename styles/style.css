@@ -12,77 +12,10 @@ input.search_bar,
 
 
 h1, h3, h5{
-    margin: 10px 10px 10px 10px;
+    margin-top: 30px;
     text-align: center;
 }
 
-#profile-pic {
-    margin-top: 15px;
-    width: 100px;
-}
-
-#profile-pic:hover {
-    cursor: pointer;
-}
-
-#logo {
-    width: 300px;
-    margin-left: 0px;
-}
-
-#logo:hover {
-    cursor: pointer;
-}
-
-#login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-}
-
-#login-pic {
-    width: 30%;
-}
-
-.login-btn {
-    border: 5px solid b#013c58;
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    font-size: 14pt;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.login-btn:hover {
-    background-color: rgb(224, 224, 131);
-    cursor: pointer;
-}
-
-hr {
-    width: 100%;
-    height: 5px;
-    background-color: #f5a201;
-}
-
-.nav-bar {
-    margin-top: 13px;
-    margin-bottom: 10px;
-    font-size: 35pt;
-    background-color: white;
-    border: 5px solid b#013c58;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.nav-bar:hover {
-    cursor: pointer;
-    background-color: rgb(224, 224, 131);
-}
 
 #container {
         display: flex;
@@ -152,22 +85,6 @@ hr {
     margin-bottom: 25px;
 }
 
-#logout,
-#list-item-btn {
-    background-color: white;
-    border: 5px solid #013c58;
-    width: 10%;
-    height: 35px;
-    border-radius: 20px;
-    font-size: 14pt;
-}
-
-#logout:hover,
-#list-item-btn:hover {
-    background-color: rgb(224, 224, 131);
-    cursor: pointer;
-}
-
 #profile-btn,
 #pricing-btn , #reviews-btn{
     background-color: white;
@@ -187,6 +104,46 @@ hr {
 
 p{
     line-height: 1.3;
+    font-size: large;
+}
+
+
+#pricing-data-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+}
+
+/* ######################### Login Styles ######################### */
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#login-pic {
+    width: 30%;
+}
+
+.login-btn {
+    border: 5px solid b#013c58;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 14pt;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.login-btn:hover {
+    background-color: rgb(224, 224, 131);
+    cursor: pointer;
 }
 
 /* ######################### Navigation Styles ######################### */
@@ -233,6 +190,142 @@ nav a {
     margin-top: 5px;
 }
 
+/* ######################### Menu Styles ######################### */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.horizontal-menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #00537a;
+    padding: 10px 0;
+}
+
+ul.horizontal-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul.horizontal-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul.horizontal-menu li a:hover {
+    background-color: #ffba42;
+    color: #e4ded4;
+}
+
+/* ######################### Profile Styles ######################### */
+
+#profile-page{
+    padding: 50px;
+}
+
+.pro-head{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 28pt;
+}
+
+.profile-image {
+    max-width: 100px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#logout {
+    background-color: #00537a;
+    border-color: #00537a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12pt;
+    margin-left: 50px;
+}
+
+#logout:hover {
+    background-color: #f5a201;
+    border-color: #f5a201;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+section{
+    margin-bottom: 60px;
+}
+
+#pp-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.review {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.contact-info {
+    margin-top: 10px;
+}
+
+
+.stars {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    color: gold;
+}
+
+/* ######################### Review Form Styles ######################### */
+
+.stars-big {
+    font-size: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.stars-big:hover {
+    color: gold;
+}
+
 /* ######################### Search Bar Styles ######################### */
 
 .search-container {
@@ -246,7 +339,7 @@ nav a {
     border: 2px solid #ccc;
     border-radius: 20px;
     font-size: 16px;
-    width: 650px;
+    width: 500px;
     margin-top: 20px;
 }
 
@@ -266,86 +359,6 @@ nav a {
 
 /* ######################### Category Styles ######################### */
 
-/* #category-select {
-    border: 5px solid #013c58;
-    width: 12%;
-    border-radius: 20px;
-    font-size: 14pt;
-}
-
-#category-select:hover {
-    background-color: rgb(224, 224, 131);
-    cursor: pointer;
-}
-
-#category-select option {
-    background-color: rgb(224, 224, 131);
-    cursor: pointer;
-}
-
-.listed-item-pic{
-    width: 20%;
-    border-radius: 20px;;
-
-}
-
-#list-item-form{
-    font-size: 18pt;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    align-items: center;
-}
-
-#item-submission-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 50px 50px 50px 50px;
-}
-
-.btn{
-    background-color: white;
-    border: 5px solid blue;
-    border-radius: 20px;
-    font-size: 18pt;
-}
-
-#pricing-data-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18pt;
-}
-
-#reviews-container{
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.review{
-    font-size: 18pt;
-    border: 5px solid blue;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;;
-    border-radius: 20px;
-}
-
-.review img{
-    width: 100%;
-}
-#category-select option:hover {
-    background-color: rgb(224, 224, 131);
-    cursor: pointer;
-} */
-
 .category-list {
     list-style: none;
     display: flex;
@@ -359,7 +372,7 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 65px;
+    margin-right: 50px;
     font-size: 18px;
     cursor: pointer;
     margin-top: 25px;
@@ -407,6 +420,10 @@ margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.p-title{
+    text-align: left;
+}
+
 .product:hover img {
     filter: brightness(70%);
 }
@@ -428,19 +445,6 @@ margin-bottom: 10px;
 .product:hover .view-item-btn {
     opacity: 1;
 }
-
-.add-cart-btn{
-    border-radius: 10px;
-    background-color: #013c58;
-    color: #fff;
-}
-
-.add-cart-btn:hover{
-    background-color: #f5a201;
-    border-color: #f5a201;
-    cursor: pointer;
-}
-
 
 
 /* ######################### Product Details Styles ######################### */
@@ -467,19 +471,74 @@ margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.add-cart-p-btn{
+.seller-p-btn{
     border-radius: 15px;
     background-color: #013c58;
     color: #fff;
     padding: 5px 100px;
 }
 
-.add-cart-p-btn:hover{
+.seller-p-btn:hover{
     background-color: #f5a201;
     border-color: #f5a201;
     cursor: pointer;
 }
 
+/* ######################### List Item Styles ######################### */
+
+.listed-item-pic{
+    width: 20%;
+    border-radius: 20px;;
+
+}
+
+#list-item-form{
+    font-size: 18pt;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+}
+
+#item-submission-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 50px 50px 50px;
+}
+
+.btn{
+    background-color: #013c58;
+    color: white;
+    border-radius: 10px;
+    font-size: 14pt;
+    padding: 5px 50px;
+}
+
+.btn:hover{
+    background-color: #f5a201;
+    border: #f5a201;
+}
+
+/* ######################### Reviews Styles ######################### */
+
+#reviews-container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review img{
+    width: 100%;
+}
 
 /* ######################### Footer Styles ######################### */
 

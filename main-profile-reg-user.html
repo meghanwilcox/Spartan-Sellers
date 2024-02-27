@@ -5,33 +5,25 @@
     <title>Spartan Sellers: Profile</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
 </head>
 
 <body>
 
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+            <a href="main-buyer.html">
+                <img src="images/logo-white.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-buyer.html'">BUYER</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-seller.html'">SELLER</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="main-profile-reg-user.html"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <a href="main-seller.html" class="nav-button">Sell</a>
+        </nav>
     </header>
 
-    <hr>
-
-    <main>
-        <div id="profile-container">
+        <!-- <div id="profile-container">
             <div id="text-box">
                 <h2 id="profile-title">Meghan's Account</h2>
 
@@ -44,7 +36,83 @@
             </div>
 
             <button id="logout" onclick="window.location.href='index.html'">LOGOUT</button>
+        </div> -->
+
+        <main id="profile-page">
+            <section class="profile-container">
+            <img src="images/profile.jpg.png" alt="Seller Profile" class="profile-image">
+            <h1 class="pro-head">Meghan Wilcox</h1>
+            <button id="logout" onclick="window.location.href='index.html'">Logout</button>
+
+        </section>
+        
+        <section>
+            <h2>About Me</h2>
+            <p>Hello, my name is Meghan Wilcox and I am a Computer Science major at UNCG.</p>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>Email: M_wilcox@uncg.edu</p>
+            </div>
+        </section>
+    
+        <section>
+            <h2>Sellers Products</h2>
+            <div id="pp-container">
+
+                <div class="product">
+                    <img src="images/textbook.jpg" alt="Database Processing Textbook">
+                    <a href="product-one.html"><button class="view-item-btn">View Item</button></a>
+                    <h3>Database Processing Textbook</h3>
+                    <p>Price: $7.00</p>
+                </div>
+    
+                <div class="product">
+                    <img src="images/calc.jpg" alt="Product 2">
+                    <a href="product-two.html"><button class="view-item-btn">View Item</button></a>
+                    <h3> TI-84 Plus CE Calculator</h3>
+                    <p>Price: $15.00</p>
+                </div>
+    
+        
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <p><strong>Jessica Smith</strong></p>
+                <p>Seller did not communicate promptly, and overall was hard to get in touch with. The product was good however, 
+                    delivered as promised and in good condition. Would buy from them again, just not the best communicator. </p>
+                <div class="stars">
+                    <div class="star" onclick="rateSeller(1)">★</div>
+                    <div class="star" onclick="rateSeller(2)">★</div>
+                    <div class="star" onclick="rateSeller(3)">★</div>
+                    
+                </div>
+                
+            </div>
+            <div class="review">
+                <p><strong>Mark Shepard</strong></p>
+                <p>Seller delivered the product as described and was friendly to work with!</p>
+                <div class="stars">
+                    <div class="star" onclick="rateSeller(1)">★</div>
+                    <div class="star" onclick="rateSeller(2)">★</div>
+                    <div class="star" onclick="rateSeller(3)">★</div>
+                    <div class="star" onclick="rateSeller(4)">★</div>
+                    <div class="star" onclick="rateSeller(5)">★</div>
+                </div>
+                
+            </div>
+            
         </div>
+       
+        </section>
+        <button class="btn" onclick="window.location.href='review-form.html'">Leave Seller a Review </button>
+        
+    </div>
     </main>
 
     <footer>

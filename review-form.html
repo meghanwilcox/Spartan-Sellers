@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script-buyer.js"></script>
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <title>Spartan Sellers: Seller</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="main-buyer.html">
+                <img src="images/logo-white.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <a class="profile" href="main-profile-reg-user.html"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <a href="main-seller.html" class="nav-button">Sell</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>Review a Seller</h1>
+
+        <form id="list-item-form">
+            <div>
+                <label for="review-title">Review Title: </label>
+                <input type="text" id="review-title" name="item-title" size="30" required>
+                <br>
+            </div>
+            <br>
+            
+            <div>
+                <label for="review">Review: </label>
+                <textarea id="review" name="review"></textarea>
+                <br>
+            </div>
+            <br>
+            <div class="stars-big">
+                <div class="star" onclick="rateSeller(1)">★</div>
+                <div class="star" onclick="rateSeller(2)">★</div>
+                <div class="star" onclick="rateSeller(3)">★</div>
+                <div class="star" onclick="rateSeller(4)">★</div>
+                <div class="star" onclick="rateSeller(5)">★</div>
+            </div>
+
+
+            <div id="item-submission-container">
+                <button class="btn" id="cancel-list-item" onclick="window.location.href='main-seller.html'">Cancel</button>
+
+                <div>
+                    
+                    <input class="btn" type="reset" id="list-item-reset" name="list-item-reset">
+                    <br>
+                </div>
+            
+                <div>
+                
+                    <input class="btn" type="submit" id="list-item-submit" onclick="window.location.href='main-profile-reg-user.html'" name="list-item-submit">
+                    <br>
+                </div>
+                
+            </div>
+            
+    
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+    
+</body>
+
+</html>

@@ -2,32 +2,32 @@
 <html lang="en">
 
 <head>
-    <title>Spartan Sellers: Seller</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <title>Spartan Sellers: Seller</title>
 </head>
 
 <body>
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+            <a href="main-seller.html">
+                <img src="images/logo-white.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-buyer.html'">BUYER</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-seller.html'">SELLER</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="main-profile-reg-user.html"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <a href="main-buyer.html" class="nav-button">Buy</a>
+        </nav>
     </header>
 
-    <hr>
+    <ul class="horizontal-menu">
+        <li><a href="list-item-form.html"> List An Item</a></li>
+        <li><a href="view-pricing-data.html">View Pricing Data</a></li>
+        <li><a href="seller-reviews.html">Reviews</a></li>
+    </ul>
 
     <main>
         <h1>View Pricing Data - All</h1>

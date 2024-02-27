@@ -2,53 +2,63 @@
 <html lang="en">
 
 <head>
-    <title>Spartan Sellers: Seller</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <title>Spartan Sellers: Seller</title>
 </head>
 
 <body>
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-buyer.html'"src="images/logo.jpg.png">
+            <a href="main-seller.html">
+                <img src="images/logo-white.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-buyer.html'">BUYER</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='main-seller.html'">SELLER</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-reg-user.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="main-profile-reg-user.html"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <a href="main-buyer.html" class="nav-button">Buy</a>
+        </nav>
     </header>
 
-    <hr>
+    <ul class="horizontal-menu">
+        <li><a href="list-item-form.html"> List An Item</a></li>
+        <li><a href="view-pricing-data.html">View Pricing Data</a></li>
+        <li><a href="seller-reviews.html">Reviews</a></li>
+    </ul>
 
     <main>
         <h1>My Reviews</h1>
 
         <div id="reviews-container">
             <div class="review">
-                <div style="width: 70%;">Seller did not communicate promptly, and overall was hard to get in touch with. The product was good however, 
-                    delivered as promised and in good condition. Would buy from them again, just not the best communicator. 
+                <p><strong>Jessica Smith</strong></p>
+                <p>Seller did not communicate promptly, and overall was hard to get in touch with. The product was good however, 
+                    delivered as promised and in good condition. Would buy from them again, just not the best communicator. </p>
+                <div class="stars">
+                    <div class="star" onclick="rateSeller(1)">★</div>
+                    <div class="star" onclick="rateSeller(2)">★</div>
+                    <div class="star" onclick="rateSeller(3)">★</div>
+                    
                 </div>
-                <div style="width: 15%;"><img src="images/3 stars.png"></div>
+                
             </div>
-            <br>
-
             <div class="review">
-                <div style="width: 70%;">Seller delivered the product as described and was friendly to work with!</div>
-                <div style="width: 15%;"><img src="images/5 stars.png"></div>
-            </div>
-            <br>
+                <p><strong>Mark Shepard</strong></p>
+                <p>Seller delivered the product as described and was friendly to work with!</p>
+                <div class="stars">
+                    <div class="star" onclick="rateSeller(1)">★</div>
+                    <div class="star" onclick="rateSeller(2)">★</div>
+                    <div class="star" onclick="rateSeller(3)">★</div>
+                    <div class="star" onclick="rateSeller(4)">★</div>
+                    <div class="star" onclick="rateSeller(5)">★</div>
+                </div>
             
-            <button class="btn" onclick="window.location.href='main-seller.html'">Back to Seller </button>
+            
         </div>
+        <button class="btn" onclick="window.location.href='main-seller.html'">Back to Seller </button>
     </main>
 
     <footer>
