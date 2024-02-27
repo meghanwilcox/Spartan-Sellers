@@ -550,3 +550,66 @@ footer {
     background-color: #013c58;
     color: white;
 }
+
+.item-to-be-approved {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user-to-be-approved {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.item-view-btn {
+    background-color: blue; /* Change button background color */
+    color: white; /* Change button text color */
+}
+
+.item-view-btn:hover {
+    background-color: rgb(50, 50, 200); /* Change button background color on hover */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(224, 224, 131);
+    color: blue;
+}
+
+.remove-button{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
+}

@@ -5,55 +5,43 @@
     <title>Spartan Sellers: Admin</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
 </head>
 
 <body>
 
     <header>
         <div>
-            <img id="logo" onclick="window.location.href='main-admin.html'"src="images/logo.jpg.png">
+            <a href="main-buyer.html">
+                <img src="images/logo.jpg.png" alt="Logo" class="logo">
+            </a>
         </div>
-        
-        <div>
-            <button class="nav-bar" onclick="window.location.href='main-admin.html'">APPROVALS</button>
-        </div>
-        
-        <div>
-            <button class="nav-bar" style="background-color: rgb(224, 224, 131);" onclick="window.location.href='users-list-admin.html'">USERS</button>
-        </div>
-        
-        <div>
-            <img id="profile-pic" onclick="window.location.href='main-profile-admin.html'" src="images/profile.jpg.png">
-        </div>
-        
+        <nav>
+            <a class="profile" href="index.html"> Logout</a>
+            <a href="main-admin.html" class="nav-button">Listings</a>
+            <a href="users-list-admin.html" class="nav-button">Users</a>
+        </nav>
     </header>
 
     <hr>
 
-    <main>
-
-        <h2 style="text-align: center;">Users:</h2>
-
-        <div id="items-to-be-approved-list-container">
-            <div class="item-to-be-approved">
-                <div class="item-to-be-approved-title">
-                    user 1 name
-                </div>
-                <button class="item-view-btn">VIEW</button>
-            </div>
-
-            <div class="item-to-be-approved">
-                <div class="item-to-be-approved-title">
-                    user 2 name
-                </div>
-                <button class="item-view-btn">VIEW</button>
-            </div>
-        </div>
     </main>
+    <div id="user-to-be-approved-list-container">
+        <div class="user-to-be-approved">
+            <div class="user-to-be-approved-title">
+                Jessica Smith
+            </div>
 
-    <footer>
-        <p>Copyright © 2024 Spartan Sellers</p>
-    </footer>
+            <button class = "remove-button" onclick="confirmUserRemoval()">Remove User</button>
+        </div>
+    
+        <div class="user-to-be-approved">
+            <div class="user-to-be-approved-title">
+                Mark Shepherd
+            </div>
+            <button class = "remove-button" onclick="confirmUserRemoval()">Remove User</button>
+        </div>
+    </div>
     
 </body>
 
