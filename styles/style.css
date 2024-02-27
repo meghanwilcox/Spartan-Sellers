@@ -1,4 +1,5 @@
 html,
+main,
 .nav-bar,
 .nav-bar,
 #category-select,
@@ -296,8 +297,8 @@ section{
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    margin-left: 15px;
 }
-
 
 
 .contact-info {
@@ -469,6 +470,17 @@ margin-bottom: 10px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
     margin-top: 10px;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+}
+
+.seller-profile{
+    color: black;
+    font-size: 12pt;
+    margin-left: 15px;
 }
 
 .seller-p-btn{
