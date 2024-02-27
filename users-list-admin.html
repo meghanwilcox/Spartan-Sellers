@@ -6,13 +6,21 @@
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <script>
+        function confirmUserRemoval() {
+            if (confirm("Are you sure you want to remove this user?")) {
+                        event.target.parentElement.remove(); 
+            }
+        }
+    </script>
 </head>
 
 <body>
 
     <header>
+        <h1>Remove Users</h1> 
         <div>
-            <a href="main-buyer.html">
+            <a href="users-list-admin.html">
                 <img src="images/logo.jpg.png" alt="Logo" class="logo">
             </a>
         </div>
@@ -25,24 +33,24 @@
 
     <hr>
 
-    </main>
-    <div id="user-to-be-approved-list-container">
-        <div class="user-to-be-approved">
-            <div class="user-to-be-approved-title">
-                Jessica Smith
+    <main>
+        <div id="user-to-be-approved-list-container">
+            <div class="user-to-be-approved">
+                <div class="user-to-be-approved-title">
+                    Jessica Smith
+                </div>
+                <button class="remove-button" onclick="confirmUserRemoval()">Remove User</button>
             </div>
 
-            <button class = "remove-button" onclick="confirmUserRemoval()">Remove User</button>
-        </div>
-    
-        <div class="user-to-be-approved">
-            <div class="user-to-be-approved-title">
-                Mark Shepherd
+            <div class="user-to-be-approved">
+                <div class="user-to-be-approved-title">
+                    Mark Shepherd
+                </div>
+                <button class="remove-button" onclick="confirmUserRemoval()">Remove User</button>
             </div>
-            <button class = "remove-button" onclick="confirmUserRemoval()">Remove User</button>
         </div>
-    </div>
-    
+    </main>
+
 </body>
 
 </html>

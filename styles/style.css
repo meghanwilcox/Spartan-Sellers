@@ -80,7 +80,7 @@ h1, h3, h5{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 75%;
+    width: 98%;
     border: 5px solid gray;
     margin-top: 25px;
     margin-bottom: 25px;
