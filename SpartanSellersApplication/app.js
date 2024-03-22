@@ -10,6 +10,16 @@ app.use(cors()); // Enable CORS
 
 app.use(bodyParser.json());
 
+
+async function getDBConnection() {
+    const db = await sqlite.open({
+    filename: 'data/spartanSellersDatabase.db',
+    driver: sqlite3.Database
+    });
+    return db;
+}
+
+
 // Root endpoint
 app.get('/', function(req, res) {
     res.send('Hello World!');
