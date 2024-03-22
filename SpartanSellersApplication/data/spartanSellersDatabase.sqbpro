@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/megwi/OneDrive - UNCG/CSC 340 Workspace/Spartan-Sellers/Spartan-Sellers/SpartanSellersApplication/data/spartanSellersDatabase.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="4135"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE review (
+    itemID char(5) NOT NULL, 
+    ratingDate DATETIME NOT NULL,
+    numberOfStars int NOT NULL CHECK(numberOfStars IN (1,2,3,4,5)),
+    ratingComment varchar(200) NOT NULL,
+    PRIMARY KEY(itemID, ratingDate),
+    FOREIGN KEY(itemID) REFERENCES item(itemID)
+);</sql><current_tab id="0"/></tab_sql></sqlb_project>
