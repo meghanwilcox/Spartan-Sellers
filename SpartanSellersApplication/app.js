@@ -25,6 +25,20 @@ app.get('/', function(req, res) {
     res.send('Hello World!');
 });
 
+app.get('/categories', async function (req, res) {
+    try {
+        let qry = 'SELECT categoryName FROM category;';
+        let db = await getDBConnection();
+        let categories = await db.all(qry);
+        await db.close();
+        console.log('Categories fetched successfully:', categories); // Log the fetched categories
+        res.send(categories); // Send the categories as JSON response
+    } catch (err) {
+        console.error('Error fetching categories:', err);
+        res.status(500).json({ error: 'Internal Server Error' }); // Send an error response
+    }
+});
+
 
 // Start the server
 app.listen(3000, function() {
