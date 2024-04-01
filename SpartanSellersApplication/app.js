@@ -37,6 +37,33 @@ async function getDBConnection() {
             res.status(500).json({ error: 'Failed to register new user' });
         }
     });
+
+    // Define the route for logging in a user
+    app.post('/auth/login', async (req, res) => {
+        try {
+            const userData = req.body;
+            // Call the appropriate method from UserAuthController to validate the user login
+            const user = await userAuthController.loginUser(userData);
+            // Return the user data or appropriate response based on validation result
+            res.json(user);
+        } catch (error) {
+            console.error('Error logging in user:', error);
+            res.status(500).json({ error: 'Failed to log in user' });
+        }
+    });
+
+    //define the route for checking if a user is an admin
+    app.post('/auth/isAdmin', async (req, res) => {
+        try {
+            const userData = req.body;
+            const user = await userAuthController.isUserAdmin(userData);
+            res.json(user);
+        } catch (error){
+            console.error('Error checking if user is admin: ', error);
+            res.status(500).json({ error: 'Failed to check if user is admin'});
+        }
+    });
+
 })();
 
 // Root endpoint

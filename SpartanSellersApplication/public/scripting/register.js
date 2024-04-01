@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //retrive data from the input forms
     const registerForm = document.getElementById('register-form');
     const userNameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        //formulate the JSON object
         const userData = {
             userName: userNameInput.value,
             password: passwordInput.value,

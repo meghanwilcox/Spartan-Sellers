@@ -5,28 +5,27 @@
     <title>Spartan Sellers Login</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
+    <script src="scripting/login.js"></script>
 </head>
 
 <body>
 <div id="login-container">
     <img id="login-pic" src="images/logo.jpg.png">
     <h1>Login to Spartan Sellers</h1>
-    <div>
+    <form id="login-form">
         <div class="input-box">
-            <input type="email" required>
-            <label>UNCG Email </label>
+            <input id="username"  required>
+            <label>UserName</label>
         </div>
     
         <div class="input-box">
-            <input type="password" required>
+            <input id="password" type="password" required>
             <label>Password🔒</label>
         </div>
-    </div>
-    <div>
         <button class="login-btn" onclick="window.location.href='register.html'">New User? Register Here</button>
-        <button class="login-btn" onclick="window.location.href='main-buyer.html'">Login</button>
-        <button class="login-btn" onclick="window.location.href='main-admin.html'">Admin Login</button>
-    </div>
+        <button type="submit" class="login-btn" >Login</button>
+    </form>
+    
 </div>
 
 </body>
