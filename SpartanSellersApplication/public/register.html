@@ -5,38 +5,47 @@
     <title>Spartan Sellers Register</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
+    <script src="scripting/register.js"></script>
 </head>
 
 <body>
 <div id="login-container">
     <img id="login-pic" src="images/logo.jpg.png">
     <h1>Register with Spartan Sellers</h1>
-    <div id="fields-container">
+    <form id="register-form">
         <div class="input-box">
-            <label>Name</label>
-            <input type="name" required>
+            <label>Username</label>
+            <input id="username" type="userName" required>
+        </div>
+        
+        <div class="input-box">
+            <label>Password🔒</label>
+            <input id="password" type="password" required>
         </div>
         
         <div class="input-box">
             <label>UNCG Email</label>
-            <input type="email" required>
+            <input id="email" type="email" required>
         </div>
 
         <div class="input-box">
-            <label>Password🔒</label>
-            <input type="password" required>
+            <label>First Name</label>
+            <input id="firstname" type="name" required>
+        </div>
+        
+        <div class="input-box">
+            <label>Last Name</label>
+            <input id="lastname" type="name" required>
         </div>
 
-        <div class="input-box">
-            <label>Re-Enter Password🔒</label>
-            <input type="password" required>
+        <div>
+            <button class="login-btn" onclick="window.location.href='index.html'">Cancel</button>
+            <button type="submit" class="login-btn">Submit</button>
         </div>
+
     </div>
-    <div>
-        <button class="login-btn" onclick="window.location.href='index.html'">Cancel</button>
-        <button class="login-btn" onclick="window.location.href='main-buyer.html'">Submit</button>
-    </div>
-</div>
+    
+</form>
 
 </body>
 
