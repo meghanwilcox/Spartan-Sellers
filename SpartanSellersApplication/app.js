@@ -82,6 +82,22 @@ async function getDBConnection() {
             res.status(500).json({ error: 'Failed to retrieve flagged users' });
         }
     });
+
+    app.delete('/user/remove-flagged-user', async (req, res) => {
+        try {
+            const userData = req.body; // Assuming the username is sent in the request body
+
+            // Call the removeFlaggedUser method from the UserDataController to remove the flagged user
+            const affectedRows = await userDataController.removeFlaggedUser(userData);
+
+            // Send a response indicating success and the number of affected rows
+            res.status(200).json({ message: 'Flagged user removed successfully', affectedRows });
+        } catch(error) {
+            console.error('Error removing flagged user: ', error);
+            res.status(500).json({ error: 'Failed to remove flagged user' });
+        }
+    });
+
     
 
 })();

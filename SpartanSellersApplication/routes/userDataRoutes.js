@@ -16,4 +16,20 @@ router.get('user/get-flagged-users', async (req, res) => {
     }
 });
 
+// Define a route to remove a flagged user
+router.delete('user/remove-flagged-user', async (req, res) => {
+    try {
+        const userData = req.body; // Assuming the username is sent in the request body
+
+        // Call the removeFlaggedUser method from the UserDataController to remove the flagged user
+        await userDataController.removeFlaggedUser(userData);
+
+        // Respond with a success message
+        res.status(200).json({ message: 'Flagged user removed successfully' });
+    } catch (error) {
+        console.error('Error removing flagged user:', error);
+        res.status(500).json({ error: 'Failed to remove flagged user' });
+    }
+});
+
 module.exports = router;

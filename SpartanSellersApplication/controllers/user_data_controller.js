@@ -11,7 +11,7 @@ class UserDataController {
 
             // Get the flagged users from the database
             const flaggedUsers = await this.db.all(
-                'SELECT * FROM Flagged_Users;'
+                'SELECT DISTINCT * FROM Flagged_Users;'
             );
 
             if (!flaggedUsers || flaggedUsers.length === 0) {
@@ -25,6 +25,30 @@ class UserDataController {
         } catch (error) {
             console.error('Error getting flagged users: ', error);
             throw new Error('Failed to get flagged users: ' + error.message);
+        }
+    }
+
+    async removeFlaggedUser(userData) {
+        try {
+            console.log("Attempting to remove flagged user: ", userData.userName);
+    
+            // Execute the DELETE query to remove the flagged user
+            await this.db.run(
+                'DELETE FROM Flagged_Users WHERE userName = ?;',
+                [userData.userName]
+            );
+    
+            // Check if any rows were affected by the DELETE operation
+            const changes = this.db.get("SELECT changes() AS changes");
+            if (changes.changes === 0) {
+                console.log("No flagged user found for userName: ", userData.userName);
+            }
+    
+            console.log("Flagged user removed successfully!");
+            return; // No need to return anything
+        } catch (error) {
+            console.error('Error removing flagged user:', error);
+            throw new Error('Failed to remove flagged user: ' + error.message);
         }
     }
 }
