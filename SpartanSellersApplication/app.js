@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 // Import the UserAuthController
 const UserAuthController = require('./controllers/user_auth_controller');
 const UserDataController = require('./controllers/user_data_controller');
+const ItemDataController = require('./controllers/item_data_controller');
 
 //getDBConnection: a function to establish a connection with the database
 async function getDBConnection() {
@@ -98,7 +99,75 @@ async function getDBConnection() {
         }
     });
 
-    
+    app.delete('/user/remove-user', async (req, res) => {
+        try {
+            const userData = req.body; // Assuming the username is sent in the request body
+
+            // Call the removeFlaggedUser method from the UserDataController to remove the flagged user
+            const affectedRows = await userDataController.removeUser(userData);
+
+            // Send a response indicating success and the number of affected rows
+            res.status(200).json({ message: 'User removed successfully', affectedRows });
+        } catch(error) {
+            console.error('Error removing user: ', error);
+            res.status(500).json({ error: 'Failed to remove user' });
+        }
+    });
+
+})();
+
+//initialize the ItemDataController with the database connection
+(async () => {
+    const db = await getDBConnection();
+    const itemDataController = new ItemDataController(db);
+
+    // Define a route to retrieve the list of items to be approved
+    app.get('/item/get-items-to-be-approved', async (req, res) => {
+        try {
+            const itemsToBeApproved = await itemDataController.getItemsToBeApproved();
+            res.json(itemsToBeApproved); 
+        } catch (error) {
+            console.error('Error retrieving items to be approved:', error);
+            res.status(500).json({ error: 'Failed to retrieve items to be approved' });
+        }
+    });  
+
+    app.put('/item/approve-item', async (req, res) => {
+        try {
+            const itemData = req.body;
+            const result = await itemDataController.approveItem(itemData);
+            res.status(200).json({ message: 'Item approved successfully!'});
+        } catch( error) {
+            console.error('Error approving item: ', error);
+            res.status(500).json({error: 'Failed to approve item'});
+        }
+    });
+
+    app.delete('/item/refuse-item', async (req, res) => {
+        try {
+            const itemData = req.body; 
+            const affectedRows = await itemDataController.refuseItem(itemData);
+
+            // Send a response indicating success and the number of affected rows
+            res.status(200).json({ message: 'Item removed successfully', affectedRows });
+        } catch(error) {
+            console.error('Error removing item: ', error);
+            res.status(500).json({ error: 'Failed to remove item' });
+        }
+    });
+
+    app.delete('/item/remove-users-items', async (req, res) => {
+        try {
+            const itemData = req.body; 
+            const affectedRows = await itemDataController.removeUsersItems(itemData);
+
+            // Send a response indicating success and the number of affected rows
+            res.status(200).json({ message: 'Items removed successfully', affectedRows });
+        } catch(error) {
+            console.error('Error removing items: ', error);
+            res.status(500).json({ error: 'Failed to remove items' });
+        }
+    });
 
 })();
 

@@ -9,7 +9,7 @@ const userDataController = new UserDataController();
 router.get('user/get-flagged-users', async (req, res) => {
     try {
         const flaggedUsers = await userDataController.getFlaggedUsers();
-        res.status(200).json(flaggedUsers); // Changed status code to 200 for successful retrieval
+        res.status(200).json(flaggedUsers); 
     } catch (error) {
         console.error('Error retrieving flagged users:', error);
         res.status(500).json({ error: 'Failed to retrieve flagged users' });
@@ -29,6 +29,22 @@ router.delete('user/remove-flagged-user', async (req, res) => {
     } catch (error) {
         console.error('Error removing flagged user:', error);
         res.status(500).json({ error: 'Failed to remove flagged user' });
+    }
+});
+
+// Define a route to remove a  user
+router.delete('user/remove-user', async (req, res) => {
+    try {
+        const userData = req.body; // Assuming the username is sent in the request body
+
+        // Call the removeFlaggedUser method from the UserDataController to remove the flagged user
+        await userDataController.removeUser(userData);
+
+        // Respond with a success message
+        res.status(200).json({ message: 'User removed successfully' });
+    } catch (error) {
+        console.error('Error removing user:', error);
+        res.status(500).json({ error: 'Failed to remove user' });
     }
 });
 
