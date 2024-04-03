@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // Import the UserAuthController
 const UserAuthController = require('./controllers/user_auth_controller');
+const UserDataController = require('./controllers/user_data_controller');
 
 //getDBConnection: a function to establish a connection with the database
 async function getDBConnection() {
@@ -65,6 +66,26 @@ async function getDBConnection() {
     });
 
 })();
+
+//initialize the UserDataController with the database connection
+(async () => {
+    const db = await getDBConnection();
+    const userDataController = new UserDataController(db);
+
+    // Define a route to retrieve the list of flagged users
+    app.get('/user/get-flagged-users', async (req, res) => {
+        try {
+            const flaggedUsers = await userDataController.getFlaggedUsers();
+            res.json(flaggedUsers); 
+        } catch (error) {
+            console.error('Error retrieving flagged users:', error);
+            res.status(500).json({ error: 'Failed to retrieve flagged users' });
+        }
+    });
+    
+
+})();
+
 
 // Root endpoint
 app.get('/', function(req, res) {
