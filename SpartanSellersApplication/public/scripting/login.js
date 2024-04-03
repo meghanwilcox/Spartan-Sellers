@@ -40,10 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     //if the user is an admin, redirect to admin main page
                     if (isAdminResponse.ok) {
-                        alert('User is an admin!');
-                        window.location.href = 'main-admin.html';
-                    } else { //if user is not an admin redirect to main buyer page
-                        window.location.href = 'main-buyer.html';
+
+                        const isAdminData = await isAdminResponse.json();
+
+                        console.log('isAdmin', isAdminData);
+
+                        if(isAdminData === true){
+                            alert('User is an admin!');
+                            window.location.href = 'main-admin.html';
+                        } else {
+                            //if user is not an admin redirect to main buyer page
+                            alert('User is not an admin!');
+                            window.location.href = 'main-buyer.html';
+                        }
+                        
+                    } else { 
+                        console.error('Error checking if user is an admin:', error);
+                        alert('An error occurred while checking if a user is an admin');
                     }
                 } catch (error) {
                     console.error('Error checking if user is an admin:', error);
