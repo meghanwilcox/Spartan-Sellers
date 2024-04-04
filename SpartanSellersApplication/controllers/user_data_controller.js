@@ -45,7 +45,7 @@ class UserDataController {
             }
     
             console.log("Flagged user removed successfully!");
-            return; // No need to return anything
+            return; 
         } catch (error) {
             console.error('Error removing flagged user:', error);
             throw new Error('Failed to remove flagged user: ' + error.message);
