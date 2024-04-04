@@ -1,4 +1,4 @@
-//this is the userAuthController class, containing the methods for user operations
+//this is the userAuthController class, containing the methods for user authentication operations
 class UserAuthController {
     constructor(db) {
         this.db = db;
