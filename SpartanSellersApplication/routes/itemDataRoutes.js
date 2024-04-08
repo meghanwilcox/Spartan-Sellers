@@ -72,7 +72,46 @@ async function getDBConnection() {
         }
     });
 
-    
+    // Define a route to search for products by keywords
+    router.get('/search', async (req, res) => {
+        try {
+            const { keywords } = req.query;
+
+            if (!keywords) {
+                return res.status(400).json({ error: 'Keywords are required for search' });
+            }
+
+            const items = await itemDataController.searchforItems(keywords);
+            res.json(items);
+        } catch (error) {
+            console.error('Error searching for products:', error);
+            res.status(500).json({ error: 'Failed to search for products' });
+        }
+    });
+
+    //Define a route to retreive the list of all items
+    router.get('/get-all-items', async (req, res) => {
+        try {
+            const items = await itemDataController.getAllItems();
+            res.status(200).json(items);
+        } catch(error) {
+            console.error('Error retreiving all items: ', error);
+            res.status(500).json({error: 'Failed to retreive all items'});
+        }
+    });
+
+    //defines a route to create a new item
+    router.post('/create-new-listing', async (req, res) => {
+        try {
+            const itemData = req.body;
+            const newItem = await itemDataController.createItemListing(itemData);
+            res.status(201).json(newItem);
+        } catch (error) {
+            console.error('Error creating new item: ', error);
+            res.status(500).json({ error: 'Failed to create new item' });
+        }
+    });
+
 })();
 
 module.exports = router;
