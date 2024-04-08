@@ -92,7 +92,26 @@ class ItemDataController{
             throw new Error('Failed to remove items: ' + error.message);
         }
     }
-    
+
+    // //this function searches for and returns all the products that have a name or description that matches the keywords
+    // async searchforItems(keywords) {
+    //     try {
+    //         // Construct the SQL query to search for products based on keywords
+    //         const query = `
+    //             SELECT * 
+    //             FROM Item 
+    //             WHERE itemName LIKE ? OR itemDescription LIKE ?
+    //         `;
+
+    //         // Execute the SQL query against the database
+    //         const products = await this.db.all(query, [`%${keywords}%`, `%${keywords}%`]);
+
+    //         return products;
+    //     } catch (error) {
+    //         console.error('Error searching for items:', error);
+    //         throw new Error('Failed to search for items');
+    //     }
+    // }
 
 
 }
