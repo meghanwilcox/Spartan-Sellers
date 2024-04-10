@@ -92,7 +92,72 @@ class ItemDataController{
             throw new Error('Failed to remove items: ' + error.message);
         }
     }
+
+    //this function searches for and returns all the products that have a name or description that matches the keywords
+    async searchforItems(keywords) {
+        try {
+            // Construct the SQL query to search for products based on keywords
+            const query = `
+                SELECT * 
+                FROM Item 
+                WHERE itemName LIKE ? OR description LIKE ?
+            `;
+
+            // Execute the SQL query against the database
+            const products = await this.db.all(query, [`%${keywords}%`, `%${keywords}%`]);
+
+            return products;
+        } catch (error) {
+            console.error('Error searching for items:', error);
+            throw new Error('Failed to search for items');
+        }
+    }
+
+    //this function retrieves all the items frm the database
+    async getAllItems() {
+        try {
+            console.log('Attempting to get all items!');
+
+             //get the items from the database
+             const items = await this.db.all(
+                'SELECT * FROM Item;'
+             );
+
+             if(!items|| items.length === 0) {
+                console.log('No items found.');
+                return [];
+             }
+
+             console.log('Items retreived successfully: ', items);
+             return items;
+
+
+        } catch(error) {
+            console.error('Error retrieving all items');
+            throw new Error('Failed to get all items');
+        }
+    }
+
+    //this function creates a new item in the database
+    async createItemListing(itemData) {
+        try {
+            console.log('Attempting to create new listing:', itemData);
     
+            // Insert a new item record into the database
+            const result = await this.db.run(
+                'INSERT INTO Item (userName, itemName, itemPrice, description, condition, category, approval_status) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                [itemData.userName, itemData.itemName, itemData.itemPrice, itemData.description, itemData.condition, itemData.category, itemData.approval_status]
+            );
+    
+            console.log('New item created successfully:', result);
+    
+            // Return the newly registered user data
+            return { id: result.lastID, ...itemData };
+        } catch(error) {
+            console.error('Error creating new listing.');
+            throw new Error('Failed to create new listing:' + error.message);
+        }
+    }
 
 
 }
