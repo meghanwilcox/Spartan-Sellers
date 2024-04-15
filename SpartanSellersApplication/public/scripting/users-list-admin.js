@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error(`Failed to fetch flagged users: ${response.statusText}`);
         }
         const flaggedUsers = await response.json();
-        
+
         // Populate the page with flagged users
         const flaggedUsersContainer = document.getElementById('user-to-be-approved-list-container');
         flaggedUsers.forEach(user => {
