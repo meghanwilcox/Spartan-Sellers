@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const responseData = await response.json();
                 alert('User logged in successfully!');
 
+                //
+                
                 // Send a separate request to check if the user is an admin
                 try {
                     //check if the user is an admin
