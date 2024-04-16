@@ -7,22 +7,25 @@ input.search_bar,
 #profile-btn,
 #logout,
 #pricing-btn,
-#list-item-btn, .add-cart-btn {
+#list-item-btn,
+.add-cart-btn {
     font-family: 'Comfortaa', sans-serif;
 }
 
 
-h1, h3, h5{
+h1,
+h3,
+h5 {
     margin-top: 30px;
     text-align: center;
 }
 
 
 #container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
 #profile-container {
     display: flex;
@@ -42,7 +45,8 @@ h1, h3, h5{
 }
 
 #profile-btn,
-#pricing-btn , #reviews-btn{
+#pricing-btn,
+#reviews-btn {
     background-color: white;
     border: 5px solid blue;
     height: 35px;
@@ -58,13 +62,13 @@ h1, h3, h5{
     cursor: pointer;
 }
 
-p{
+p {
     line-height: 1.3;
     font-size: large;
 }
 
 
-#pricing-data-container{
+#pricing-data-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,33 +77,185 @@ p{
 
 /* ######################### Login Styles ######################### */
 
-#login-container {
+#login {
+    font-family: Arial, sans-serif;
+    background-image: url('/SpartanSellersApplication/public/images/uncg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    min-height: 100vh;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px; 
+    height: 550px;
+    text-align: center; 
 }
 
 #login-pic {
-    width: 30%;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+}
+
+.input-box label {
+    width: 100px; 
+    text-align: right;
+    margin-right: 10px;
+}
+
+.input-box input {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-form input[type="userName"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 250px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    
+}
+
+#login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 250px;
 }
 
 .login-btn {
-    background-color: #00537a;
-    border-color: #00537a;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12pt;
-    margin-left: 50px;
-    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #013c58;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: larger;
+}
+.login-btn:hover {
+    background-color: #f5a201;
+    
+}
+
+#register-link{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#register-link a {
+    color: #013c58;
+}
+
+#register-link a:hover {
+    color: #f5a201
+}
+
+/* ######################### Register Styles ######################### */
+
+#register {
+    font-family: Arial, sans-serif;
+    background-image: url('/SpartanSellersApplication/public/images/uncg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px; 
+    height: 600px;
+    text-align: center; 
+}
+
+#login-pic {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.input-box label {
+    width: 100px; 
+    text-align: right;
+    margin-right: 20px; 
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#register-form input[type="userName"],
+#register-form input[type="password"], 
+#register-form input[type="name"], 
+#register-form input[type="email"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 250px;
+}
+
+.login-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #013c58;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: larger;
 }
 
 .login-btn:hover {
     background-color: #f5a201;
-    border-color: #f5a201;
+    
 }
 
 /* ######################### Navigation Styles ######################### */
@@ -115,7 +271,7 @@ header {
 }
 
 .logo {
-    max-width: 100px; 
+    max-width: 100px;
     height: auto;
 }
 
@@ -142,7 +298,7 @@ nav a {
     text-decoration: none;
 }
 
-.profile{
+.profile {
     margin-top: 5px;
 }
 
@@ -183,11 +339,11 @@ ul.horizontal-menu li a:hover {
 
 /* ######################### Profile Styles ######################### */
 
-#profile-page{
+#profile-page {
     padding: 50px;
 }
 
-.pro-head{
+.pro-head {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -224,7 +380,7 @@ ul.horizontal-menu li a:hover {
     margin-top: 30px;
 }
 
-section{
+section {
     margin-bottom: 60px;
 }
 
@@ -241,6 +397,7 @@ section{
     flex-direction: row;
     align-items: center;
 }
+
 .review {
     border: 1px solid #ddd;
     padding: 10px;
@@ -333,8 +490,9 @@ section{
     cursor: pointer;
     margin-top: 25px;
 }
+
 .category-item-text {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .category-item:hover {
@@ -345,22 +503,21 @@ margin-bottom: 10px;
     text-decoration: overline;
 }
 
-.at-icon{
+.at-icon {
     margin-top: 15px;
 }
 
 
 /* ######################### Product Styles ######################### */
 
-#p-container {
+#item-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 25px;
     align-items: center;
 }
-
-.product {
+.item {
     width: 20%;
     margin: 35px;
     text-align: center;
@@ -376,7 +533,7 @@ margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.p-title{
+.p-title {
     text-align: left;
 }
 
@@ -385,7 +542,7 @@ margin-bottom: 10px;
 }
 
 .view-item-btn {
-    position: absolute ;
+    position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -405,7 +562,7 @@ margin-bottom: 10px;
 
 /* ######################### Product Details Styles ######################### */
 
-.product-details{
+.product-details {
     display: flex;
     max-width: 1800px;
     background-color: #fff;
@@ -432,20 +589,20 @@ margin-bottom: 10px;
     align-items: center;
 }
 
-.seller-profile{
+.seller-profile {
     color: black;
     font-size: 12pt;
     margin-left: 15px;
 }
 
-.seller-p-btn{
+.seller-p-btn {
     border-radius: 15px;
     background-color: #013c58;
     color: #fff;
     padding: 5px 100px;
 }
 
-.seller-p-btn:hover{
+.seller-p-btn:hover {
     background-color: #f5a201;
     border-color: #f5a201;
     cursor: pointer;
@@ -453,29 +610,30 @@ margin-bottom: 10px;
 
 /* ######################### List Item Styles ######################### */
 
-.listed-item-pic{
+.listed-item-pic {
     width: 20%;
-    border-radius: 20px;;
+    border-radius: 20px;
+    ;
 
 }
 
-#list-item-form{
+#list-item-form {
     font-size: 18pt;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     align-items: center;
 }
 
-#item-submission-container{
+#item-submission-container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin: 50px 50px 50px 50px;
 }
 
-.btn{
+.btn {
     background-color: #013c58;
     color: white;
     border-radius: 10px;
@@ -483,27 +641,27 @@ margin-bottom: 10px;
     padding: 5px 50px;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #f5a201;
     border: #f5a201;
 }
 
 /* ######################### Reviews Styles ######################### */
 
-#reviews-container{
+#reviews-container {
     padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.review{
+.review {
     border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-.review img{
+.review img {
     width: 100%;
 }
 
@@ -544,7 +702,7 @@ footer {
     background-color: #f5a201;
     color: white;
     align-items: flex-end;
-} 
+}
 
 .remove-flag-button{
     display: block;
@@ -577,13 +735,14 @@ footer {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
 .item-view-btn {
     background-color: blue;
-    color: white; 
+    color: white;
 }
 
 .item-view-btn:hover {
-    background-color: rgb(50, 50, 200); 
+    background-color: rgb(50, 50, 200);
 }
 
 #listed-items-container {
@@ -609,7 +768,7 @@ footer {
     border-radius: 20px;
 }
 
-.listed-item:hover{
+.listed-item:hover {
     background-color: rgb(224, 224, 131);
     cursor: pointer;
 }
