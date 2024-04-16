@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+
+    <!-- Link the JavaScript file -->
+    <script src="scripting/users-list-admin.js"></script>
+
     <script>
         function confirmUserRemoval() {
             if (confirm("Are you sure you want to remove this user?")) {
@@ -13,6 +17,8 @@
             }
         }
     </script>
+
+
 </head>
 
 <body>
@@ -25,7 +31,7 @@
             </a>
         </div>
         <nav>
-            <a class="profile" href="index.html"> Logout</a>
+            <a class="profile" href="login.html"> Logout</a>
             <a href="main-admin.html" class="nav-button">Listings</a>
             <a href="users-list-admin.html" class="nav-button">Users</a>
         </nav>
@@ -35,19 +41,8 @@
 
     <main>
         <div id="user-to-be-approved-list-container">
-            <div class="user-to-be-approved">
-                <div class="user-to-be-approved-title">
-                    Jessica Smith
-                </div>
-                <button class="remove-button" onclick="confirmUserRemoval()">Remove User</button>
-            </div>
-
-            <div class="user-to-be-approved">
-                <div class="user-to-be-approved-title">
-                    Mark Shepherd
-                </div>
-                <button class="remove-button" onclick="confirmUserRemoval()">Remove User</button>
-            </div>
+           
+           
         </div>
     </main>
 
