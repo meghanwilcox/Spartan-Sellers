@@ -8,7 +8,7 @@
     <script src="scripting/main-buyer.js"></script>
     <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
-    <title>Spartan Sellers: Buyer</title>
+    <title>Spartan Sellers | Buyer</title>
 
 </head>
 
@@ -31,78 +31,61 @@
 
         <div id="container">
 
-                <div>
-                    <div class="search-container">
-                        <i class="fas fa-search search-icon" id="search-icon"></i>
-                        <input type="text" class="search-bar" id="search-input" placeholder="Search">
-                    </div>
-                </div>
+            <div class="search-container">
+               
+                <i class="fa-solid fa-magnifying-glass" onclick="searchProducts()"></i>
+        
+                <input type="text" id="search-input" class="search-bar" placeholder="Search">
+                
+            </div>
 
+            <div id="search-results"></div>
+        
+            
+            <div>
             <ul class="category-list" id="sortable-list">
-                <li class="category-item" onclick="sortItems('Category 1')">
+                <!-- List of categories -->
+                <li class="category-item" data-category="Dorm Supplies">
                     <div class="category-item-text">
-                    Dorm Supplies
-                </div>
+                        Dorm Supplies
+                    </div>
+                    <!-- Icon representing the category -->
                     <i class="fa-solid fa-bed cat-icon"></i>
                 </li>
-                <li class="category-item" onclick="sortItems('Category 2')">
+                <li class="category-item" data-category="Textbooks">
                     <div class="category-item-text">
-                    Textbooks
-                </div>
+                        Textbooks
+                    </div>
                     <i class="fa-solid fa-book cat-icon"></i>
                 </li>
-                <li class="category-item" onclick="sortItems('Category 3')">
+                <li class="category-item" data-category="School Supplies">
                     <div class="category-item-text">
-                    School Supplies
-                </div>
+                        School Supplies
+                    </div>
                     <i class="fa-solid fa-pencil cat-icon"></i>
                 </li>
-                <li class="category-item" onclick="sortItems('Category 4')">
+                <li class="category-item" data-category="Apparel">
                     <div class="category-item-text">
-                    Apparel
-                </div>
+                        Apparel
+                    </div>
                     <i class="fa-solid fa-shirt cat-icon"></i>
                 </li>
-                <li class="category-item" onclick="sortItems('Category 5')">
+                <li class="category-item" data-category="View All">
                     <div class="category-item-text">
-                    View All
-                </div>
-                <i class="fa-solid fa-tsag"></i>
+                        View All
+                    </div>
+                    <i class="fa-solid fa-tsag"></i>
                 </li>
             </ul>
-
-        </div>
-
-        <div id="p-container">
-
-            <div id="item-list"></div> <!-- This is where the items will be displayed -->
-
-
-            <!-- <div class="product">
-                <img src="images/textbook.jpg" alt="Database Processing Textbook">
-                <a href="product-one.html"><button class="view-item-btn">View Item</button></a>
-                <h3>Database Processing Textbook</h3>
-                <p>Price: $7.00</p>
-            </div>
-
-            <div class="product">
-                <img src="images/calc.jpg" alt="Product 2">
-                <a href="product-two.html"><button class="view-item-btn">View Item</button></a>
-                <h3> TI-84 Plus CE Calculator</h3>
-                <p>Price: $15.00</p>
-            </div>
-
-            <div class="product">
-
-                <img src="images/pens.jpg" alt="Product 3">
-                <a href="product-three.html"><button class="view-item-btn">View Item</button></a>
-                <h3>Zebra Mildliner Highlighter Pens</h3>
-                <p>Price: 3.00</p>
-            </div> -->
-
-
         </div>
         </div>
+
+
+            <div id="item-list">
+                <!-- Product items will be inserted here -->
+              </div>
+
+
     </main>
 
 

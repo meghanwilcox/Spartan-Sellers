@@ -104,9 +104,9 @@ class ItemDataController{
             `;
 
             // Execute the SQL query against the database
-            const products = await this.db.all(query, [`%${keywords}%`, `%${keywords}%`]);
+            const items = await this.db.all(query, [`%${keywords}%`, `%${keywords}%`]);
 
-            return products;
+            return items;
         } catch (error) {
             console.error('Error searching for items:', error);
             throw new Error('Failed to search for items');
@@ -138,6 +138,24 @@ class ItemDataController{
         }
     }
 
+    async getItemsByCategory(category) {
+        try {
+            console.log('Attempting to fetch products in category:', category);
+    
+            // Query the database to get items by category
+            const items = await this.db.all(
+                'SELECT * FROM Item WHERE category = ?;',
+                [category]
+            );
+    
+            console.log('Products retrieved successfully:', items);
+            return items;
+        } catch (error) {
+            console.error('Error getting products: ', error);
+            throw new Error('Failed to get products: ' + error.message);
+        }
+    }
+
     //this function creates a new item in the database
     async createItemListing(itemData) {
         try {
@@ -145,8 +163,8 @@ class ItemDataController{
     
             // Insert a new item record into the database
             const result = await this.db.run(
-                'INSERT INTO Item (userName, itemName, itemPrice, description, condition, category, approval_status) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                [itemData.userName, itemData.itemName, itemData.itemPrice, itemData.description, itemData.condition, itemData.category, itemData.approval_status]
+                'INSERT INTO Item (userName, itemName, itemImg itemPrice, description, condition, category, approval_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+                [itemData.userName, itemData.itemName, itemData.itemImg, itemData.itemPrice, itemData.description, itemData.condition, itemData.category, itemData.approval_status]
             );
     
             console.log('New item created successfully:', result);

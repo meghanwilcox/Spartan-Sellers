@@ -1,4 +1,3 @@
-
 html,
 main,
 .nav-bar,
@@ -81,9 +80,9 @@ p {
 #login {
     font-family: Arial, sans-serif;
     background-image: url('/SpartanSellersApplication/public/images/uncg.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     display: flex;
@@ -97,9 +96,9 @@ p {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 450px; 
+    width: 450px;
     height: 550px;
-    text-align: center; 
+    text-align: center;
 }
 
 #login-pic {
@@ -118,13 +117,13 @@ p {
 }
 
 .input-box label {
-    width: 100px; 
+    width: 100px;
     text-align: right;
     margin-right: 10px;
 }
 
 .input-box input {
-    flex: 1; 
+    flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -138,7 +137,7 @@ p {
     width: 250px;
     margin-top: 35px;
     margin-bottom: 35px;
-    
+
 }
 
 #login-form input[type="password"] {
@@ -159,12 +158,13 @@ p {
     margin-top: 50px;
     font-size: larger;
 }
+
 .login-btn:hover {
     background-color: #f5a201;
-    
+
 }
 
-#register-link{
+#register-link {
     text-align: center;
     margin-top: 50px;
 }
@@ -182,9 +182,9 @@ p {
 #register {
     font-family: Arial, sans-serif;
     background-image: url('/SpartanSellersApplication/public/images/uncg.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     display: flex;
@@ -198,9 +198,9 @@ p {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 450px; 
+    width: 450px;
     height: 600px;
-    text-align: center; 
+    text-align: center;
 }
 
 #login-pic {
@@ -216,13 +216,13 @@ p {
 .input-box {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .input-box label {
-    width: 100px; 
+    width: 100px;
     text-align: right;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .input-box input {
@@ -233,9 +233,9 @@ p {
 }
 
 #register-form input[type="userName"],
-#register-form input[type="password"], 
-#register-form input[type="name"], 
-#register-form input[type="email"]{
+#register-form input[type="password"],
+#register-form input[type="name"],
+#register-form input[type="email"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -256,7 +256,7 @@ p {
 
 .login-btn:hover {
     background-color: #f5a201;
-    
+
 }
 
 /* ######################### Navigation Styles ######################### */
@@ -461,13 +461,13 @@ section {
     border: 3px solid #bdb7b7;
 }
 
-.search-icon {
+.fa-magnifying-glass {
     margin-right: 5px;
     color: #888;
     margin-top: 20px;
 }
 
-.search-icon:hover {
+.fa-magnifying-glass:hover {
     filter: brightness(25%);
 }
 
@@ -514,31 +514,36 @@ section {
 #item-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
     padding: 25px;
     align-items: center;
 }
-.item {
-    width: 20%;
-    margin: 35px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+
+.product-item {
     position: relative;
+    width: 419px;
+    /* Set a fixed width for each product item */
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Ensure the button doesn't overflow */
 }
 
-.product img {
+.product-item:hover .view-item-btn {
+    opacity: 1;
+}
+
+.product-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: filter 0.3s ease-in-out;
 }
 
-.p-title {
-    text-align: left;
-}
-
-.product:hover img {
+.product-item:hover .product-image {
     filter: brightness(70%);
 }
 
@@ -549,15 +554,27 @@ section {
     transform: translate(-50%, -50%);
     background-color: gray;
     color: white;
-    padding: 24px 30px;
+    padding: 30px 60px;
     border: none;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    /* Ensure the button appears above the image */
 }
 
-.product:hover .view-item-btn {
-    opacity: 1;
+.no-results-message {
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    /* Position the element absolutely */
+    top: 50%;
+    /* Align the top of the element to the vertical center of the viewport */
+    left: 50%;
+    /* Align the left side of the element to the horizontal center of the viewport */
+    transform: translate(-50%, -50%);
+    /* Move the element back by half of its own width and height */
 }
 
 
@@ -669,12 +686,15 @@ section {
 /* ######################### Footer Styles ######################### */
 
 footer {
-    height: 50px;
-    text-align: center;
-    padding: 45px;
-    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 100px;
     background-color: #013c58;
     color: white;
+    text-align: center;
+    margin-top: 620px;
+    padding-top: 30px;
+
 }
 
 /* ######################### Admin Styles ######################### */
@@ -692,7 +712,7 @@ footer {
     color: blue;
 }
 
-.remove-user-button{
+.remove-user-button {
     display: block;
     margin: 20px auto;
     padding: 5px 20px;
@@ -705,7 +725,7 @@ footer {
     align-items: flex-end;
 }
 
-.remove-flag-button{
+.remove-flag-button {
     display: block;
     margin: 20px auto;
     padding: 5px 20px;
@@ -716,7 +736,8 @@ footer {
     background-color: #f5a201;
     color: white;
     align-items: flex-end;
-} 
+}
+
 .item-to-be-approved {
     display: flex;
     justify-content: space-between;
