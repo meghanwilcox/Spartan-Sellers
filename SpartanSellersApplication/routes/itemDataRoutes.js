@@ -100,6 +100,17 @@ async function getDBConnection() {
         }
     });
 
+    router.post('/get-items-by-category', async (req, res) => {
+        try {
+            const { category } = req.body; // Extract category from request body
+            const items = await itemDataController.getItemsByCategory(category);
+            res.status(200).json(items); 
+        } catch (error) {
+            console.error('Error retrieving products:', error);
+            res.status(500).json({ error: 'Failed to retrieve products' });
+        }
+    });
+
     //defines a route to create a new item
     router.post('/create-new-listing', async (req, res) => {
         try {
