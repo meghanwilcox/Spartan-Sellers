@@ -1,0 +1,468 @@
+html,
+main,
+.nav-bar,
+.nav-bar,
+#category-select,
+input.search_bar,
+#profile-btn,
+#logout,
+#pricing-btn,
+#list-item-btn, 
+.add-cart-btn, 
+.category-item-text,
+#search-btn {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+#profile-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1, h3, h5{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+#container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+#container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+}
+
+#container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-info{
+    height: 500px;
+}
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#profile-email-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#text-box {
+    width: 30%;
+}
+
+#profile-btn,
+#pricing-btn , #reviews-btn{
+    background-color: white;
+    border: 5px solid blue;
+    height: 35px;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 14pt;
+    ;
+}
+
+#profile-btn:hover,
+#pricing-btn:hover {
+    background-color: rgb(224, 224, 131);
+    cursor: pointer;
+}
+
+p{
+    line-height: 1.3;
+    font-size: large;
+}
+
+
+#pricing-data-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+}
+
+/* ######################################################################## */
+
+#p-container{
+    width: 80%;
+}
+
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: auto;
+  caption-side: top;
+  empty-cells: hide;
+  table-layout: auto;
+}
+
+#product-detail-container {
+  width: 70%;
+  margin: auto;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+span {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+#product-detail-container {
+  display: none;
+}
+
+#form2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+
+.card-holder {
+    padding: 45px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 50%;
+    margin-right: 100px;
+}
+
+#contact-seller{
+    padding: 45px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.card-holder h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+#item-details-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#item{
+    height: 100%;
+}
+
+/* ######################### Navigation Styles ######################### */
+
+header {
+    background-color: #013c58;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px; 
+    height: auto;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.nav-icon {
+    margin-right: 5px;
+}
+
+.nav-button {
+    background-color: #f5a201;
+    color: white;
+    padding: 5px 100px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+}
+
+.profile{
+    margin-top: 5px;
+}
+
+/* ######################### Admin Styles ######################### */
+
+
+.admin-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(224, 224, 131);
+    color: blue;
+}
+
+.remove-user-button{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
+} 
+
+.remove-flag-button{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
+} 
+.item-to-be-approved {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user-to-be-approved {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.item-view-btn {
+    background-color: blue;
+    color: white; 
+}
+
+.item-view-btn:hover {
+    background-color: rgb(50, 50, 200); 
+}
+
+#listed-items-container {
+    display: flex;
+    margin-left: 11%;
+    margin-right: 10%;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    font-size: 18pt;
+}
+
+.listed-item {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid blue;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listed-item:hover{
+    background-color: rgb(224, 224, 131);
+    cursor: pointer;
+}
+
+
+#items-to-be-approved-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-to-be-approved {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    border: 5px solid gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* ######################### Search Bar Styles ######################### */
+#search-btn{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 24pt;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 500px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.search-bar:hover {
+    border: 3px solid #bdb7b7;
+}
+
+.search-icon {
+    margin-right: 5px;
+    color: #888;
+    margin-top: 20px;
+}
+
+.search-icon:hover {
+    filter: brightness(25%);
+}
+
+/* ######################### Category Styles ######################### */
+
+.category-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.category-item-text {
+margin-bottom: 10px;
+font-size: 12pt;
+}
+
+.category-item:hover {
+    font-size: 20px;
+}
+
+.category-item:hover .category-item-text {
+    text-decoration: overline;
+}
+
+.at-icon{
+    margin-top: 15px;
+}
+
+/* ######################### Login Styles ######################### */
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#login-pic {
+    width: 30%;
+}
+
+.login-btn {
+    background-color: #00537a;
+    border-color: #00537a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12pt;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.login-btn:hover {
+    background-color: #f5a201;
+    border-color: #f5a201;
+}
+
+
+/* ######################### Footer Styles ######################### */
+
+footer {
+    height: 50px;
+    text-align: center;
+    padding: 45px;
+    margin-top: 50px;
+    background-color: #013c58;
+    color: white;
+}

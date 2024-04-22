@@ -1,0 +1,48 @@
+<%- include('./partials/admin-head') %>
+<main>
+<body>
+<div id="p-container">
+
+    <h2>Flagged Users Awaiting Review</h2>
+            
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Reason Flagged</th>
+            <th>Remove Flag?</th>
+            <th>Ban User?</th>
+        </tr>
+        <% for (const user of users){ %>
+            <tr>
+                <td>
+                    <%= user.firstName %> <%= user.lastName %> 
+
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= user.reason_Flagged %>
+                </td>
+                <td>
+                    <form action="/admin/removeFlag/<%= user.userName %>" method="POST">
+                        <button type="submit">Remove Flag</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/admin/banUser/<%= user.userName %>" method="POST">
+                        <button type="submit">Ban</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+</div>
+
+</body>
+
+</main>
+
+</html>

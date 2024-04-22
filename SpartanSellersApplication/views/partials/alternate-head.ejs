@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
+    <title><%= title %></title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="/user/all">
+                <img src="/images/logo-white.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <p><%= user %></p>
+
+        <nav>
+            <form action="/user/dataAll" method="GET">
+                <button type="submit" class="nav-button">View Pricing Info</button>
+            </form>
+        </nav>
+
+        <nav>
+            <form action="/user/sellers" method="GET">
+                <button type="submit" class="nav-button">View Sellers</button>
+            </form>
+        </nav>
+
+        <nav>
+            <a class="profile" href="/user/profile"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>      
+        </nav>
+
+        
+    </header>
+
+
+    <main>

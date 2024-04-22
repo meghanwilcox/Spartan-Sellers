@@ -1,0 +1,38 @@
+<%- include('./partials/alternate-head') %>
+        <hr>
+            <div id="container2">
+                <div class="card-holder" id="item">
+                    <h3>
+                        <%= item.itemName %>
+                    </h3>
+                    <p><%= item.category %></p>
+                    <p><%= item.description %></p>
+                    <p>$<%= item.itemPrice %></p>
+                    <p>Listed By: <%= email %></p>
+                </div>
+    
+            <div id="contact-seller">
+                <form action="mailto:<%= email %>" method="post" enctype="text/plain">
+                    <label>Contact the Seller</label><br><br>
+                    <label>Subject:</label>
+                    <input type="text" id="subject" name="subject" value="Interest in <%= item.itemName %>" required><br><br>
+                    <label>Body:</label>
+                    <textarea id="body" name="body" required>Hello! I am interested in purchasing your item, <%= item.itemName %>! Best, <%= name %></textarea><br><br>
+                    <input type="submit" class="nav-button" value="Send">
+                </form>
+            </div>
+        </div>
+        
+        
+       
+
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>

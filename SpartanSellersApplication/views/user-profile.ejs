@@ -1,0 +1,105 @@
+<%- include('./partials/alternate-head') %>
+<hr>
+<div id="profile-title">
+    <h2>Hello <%= firstName %>!</h2>
+    <form id="logout" action="/user/logout" method="POST">
+        <button class="nav-button" type="submit">LOGOUT</button>
+    </form>
+</div><br>
+<hr>
+<br>
+<div id="container3">
+    
+        <div id="p-container">
+            <h3>Your Reviews</h3>
+            <table>
+                <tr>
+                    <th>Rating Date</th>
+                    <th>Number Of Stars</th>
+                    <th>Comment</th>
+                </tr>
+                <% for (const review of reviews){ %>
+                    <tr>
+                        <td>
+                            <%= review.ratingDate %>
+                        </td>
+                        <td>
+                            <%= review.numberOfStars %>
+                        </td>
+                        <td>
+                            <%= review.ratingComment %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="p-container">
+            <h3>Your Items Pending Approval</h3>
+            <table>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+                <% for (const n of group){ %>
+                    <tr>
+                        <td>
+                            <%= n.itemName %>
+                        </td>
+                        <td>
+                            <%= n.category %>
+                        </td>
+                        <td>
+                            <%= n.itemPrice %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="p-container">
+            <h3>Your Items For Sale</h3>
+            <table>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+                <% for (const item of items){ %>
+                    <tr>
+                        <td>
+                            <%= item.itemName %>
+                        </td>
+                        <td>
+                            <%= item.category %>
+                        </td>
+                        <td>
+                            <%= item.itemPrice %>
+                        </td>
+                        <td>
+                            <form action="/user/sold" method="POST">
+                                <input type="hidden" value="<%= item.itemID %>" name="itemID">
+                                <button type="submit">Mark as Sold</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>

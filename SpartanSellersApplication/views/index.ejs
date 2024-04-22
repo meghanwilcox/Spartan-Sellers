@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spartan Sellers Login</title>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="login-container">
+        <img id="login-pic" src="/images/logo.jpg.png">
+        <h1>Login to Spartan Sellers</h1>
+        <form id="login-form" action="/user/login" method="POST"> <!-- Changed action to your login endpoint -->
+            <div class="input-box">
+                <input id="username" name="username" required> <!-- Added name attribute for username -->
+                <label>UserName</label>
+            </div>
+        
+            <div class="input-box">
+                <input id="password" name="password" type="password" required> <!-- Added name attribute for password -->
+                <label>Password🔒</label>
+            </div>
+            <button type="submit" class="login-btn">Login</button> <!-- Changed button type to submit -->
+        </form>
+        <form action="/user/registerPage" method="GET">
+            <button class="login-btn" type="submit">New User? Register Here</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+  
