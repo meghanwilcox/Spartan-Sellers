@@ -1,0 +1,59 @@
+<%- include('./partials/admin-head') %>
+<main>
+<body>
+<div id="p-container">
+
+    <h2>Items Awaiting Approval</h2>
+            
+    <table>
+        <tr>
+            <th>Listed By</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Condition</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Approve?</th>
+            <th>Remove?</th>
+        </tr>
+        <% for (const item of items){ %>
+            <tr>
+                <td>
+                    <%= item.userName %>
+                </td>
+                <td>
+                    <%= item.itemName %>
+                </td>
+                <td>
+                    <%= item.category %>
+                </td>
+                <td>
+                    <%= item.condition %>
+                </td>
+                <td>
+                    <%= item.itemPrice %>
+                </td>
+                <td>
+                    <%= item.description %>
+                </td>
+                <td>
+                    <form action="/admin/approve/<%= item.itemID %>" method="POST">
+                        <button type="submit">Approve</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/admin/remove/<%= item.itemID %>" method="POST">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+</div>
+
+</body>
+
+</main>
+
+</html>

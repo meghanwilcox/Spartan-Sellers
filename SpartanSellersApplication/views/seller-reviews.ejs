@@ -1,0 +1,54 @@
+<%- include('./partials/alternate-head') %>
+        <hr>
+            <div id="container2">
+                <div class="card-holder" id="item">
+                    <p>Reviews of <%= email %></p>
+
+                    <table>
+                        <tr>
+                            <th>Rating Date</th>
+                            <th>Number Of Stars</th>
+                            <th>Comment</th>
+                        </tr>
+                        <% for (const review of reviews){ %>
+                            <tr>
+                                <td>
+                                    <%= review.ratingDate %>
+                                </td>
+                                <td>
+                                    <%= review.numberOfStars %>
+                                </td>
+                                <td>
+                                    <%= review.ratingComment %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </table>
+                </div>
+    
+                <div id="contact-seller">
+                    <form action="/user/makeReview" method="POST">
+                        <label>Leave a Review</label>
+                        <input type="hidden" name="userName" value="<%= username %>"><br><br>
+                        <label>NumberOfStars:</label>
+                        <input type="number" id="numStars" name="numberOfStars" required><br><br>
+                        <label>Comment:</label>
+                        <textarea id="comment" name="ratingComment" required></textarea><br><br>
+                        <button type="submit" class="nav-button">Send</button>
+                    </form>
+                </div>
+        </div>
+        
+        
+       
+
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>

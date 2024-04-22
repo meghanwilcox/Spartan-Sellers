@@ -1,0 +1,65 @@
+<%- include('./partials/head') %>
+<hr>
+<div id="container2" class="price-info">
+        <div id="p-container">
+            <p>Category: <%= category %></p>
+            <table>
+                <tr>
+                    <th>Number of Items Listed</th>
+                    <th>Number of Items Sold</th>
+                    <th>Average Price</th>
+                    <th>Most Expensive Item Sold At $</th>
+                    <th>Least Expensive Item Sold At $</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <%= numListed %>
+                        </td>
+                        <td>
+                            <%= data.numSold %>
+                        </td>
+                        <td>
+                            <%= data.avg_price %>
+                        </td>
+                        <td>
+                            <%= data.mostExpensive %>
+                        </td>
+                        <td>
+                            <%= data.leastExpensive %>
+                        </td>
+                    </tr>
+            </table>
+            
+
+        </div>
+        
+        <div id="form-cont">
+            <form id="form2" action="/user/dataCategory" method="POST">
+                <h3>Select a Category to View Pricing Information by Category</h3>
+                <br>
+                <div>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="Dorm Supplies" name="Dorm Supplies">Dorm Supplies</option>
+                        <option value="Textbooks" name="Textbooks">Textbooks</option>
+                        <option value="School Supplies" name="School Supplies">School Supplies</option>
+                        <option value="Apparel" name="Apparel">Apparel</option>
+                        <option value="Miscellaneous" name="Miscellaneous">Miscellaneous</option>
+                    </select>
+                </div>
+                <br>
+                <button id="save-product" type="submit" class="nav-button">Submit</button>
+            </form>
+        </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<%- include('./partials/alternate-head') %>
+<hr>
+<div id="container2">
+        <div id="p-container" class="price-info">
+
+            <p>Sellers</p>
+            
+            <table>
+                <% for (const seller of sellers){ %>
+                    <tr>
+                        <td>
+                            <a href="/user/ratings/<%= seller.email %>">
+                                <%= seller.email %>
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+
+        </div>
+        
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>
