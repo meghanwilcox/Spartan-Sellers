@@ -1,3 +1,7 @@
+"use strict";
+const db = require("../models/db-conn");
+const path = require("path");
+
 // Function to retrieve all approved items for sale
 function getAll() {
   // SQL query to select all approved items that are not sold

@@ -1,3 +1,7 @@
+"use strict";
+const db = require("../models/db-conn");
+const path = require("path");
+
 // Function to retrieve all items awaiting approval
 function getAllToBeApproved() {
   // SQL query to select items with approval_status = 0

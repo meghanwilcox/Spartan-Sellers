@@ -8,7 +8,10 @@
                     <p><%= item.category %></p>
                     <p><%= item.description %></p>
                     <p>$<%= item.itemPrice %></p>
-                    <p>Listed By: <%= email %></p>
+                    <p>Listed By:</p>
+                    <a href="/user/ratings/<%= email %>">
+                        <%= email %>
+                    </a>
                 </div>
     
             <div id="contact-seller">
