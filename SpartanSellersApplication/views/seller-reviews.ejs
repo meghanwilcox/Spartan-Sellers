@@ -29,6 +29,7 @@
                 <div id="contact-seller">
                     <form action="/user/makeReview" method="POST">
                         <label>Leave a Review</label>
+                        <input type="hidden" name="email" value="<%= email %>">
                         <input type="hidden" name="userName" value="<%= username %>"><br><br>
                         <label>NumberOfStars:</label>
                         <input type="number" id="numStars" name="numberOfStars" required><br><br>

@@ -216,6 +216,7 @@ function getRatings(req, res, next){
 // Function to leave a review for a seller
 function leaveReview(req, res, next){
   try {
+    console.log(req.body);
     let userName = req.body.userName;
     let numberOfStars = req.body.numberOfStars;
     let ratingComment = req.body.ratingComment;
@@ -225,6 +226,9 @@ function leaveReview(req, res, next){
     }
     let params = [userName, numberOfStars, ratingComment];
     model.leaveReview(params);
+
+    let reviews = model.getRatings(req.body.email);
+    res.render("seller-reviews", {title: 'Reviews for ' + req.body.email, user: req.session.currentUser.email, reviews: reviews, email: req.body.email, username: userName  });
   } catch (err) {
       console.error("Error while creating review ", err.message);
       next(err);
