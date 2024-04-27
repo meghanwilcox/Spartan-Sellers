@@ -27,19 +27,56 @@
                 </td>
                 <td>
                     <form action="/admin/removeFlag/<%= user.userName %>" method="POST">
-                        <button type="submit">Remove Flag</button>
+                        <button class= "remove-flag-button" type="submit">Remove Flag</button>
                     </form>
                 </td>
                 <td>
                     <form action="/admin/banUser/<%= user.userName %>" method="POST">
-                        <button type="submit">Ban</button>
+                        <button class= "remove-user-button" type="submit">Ban</button>
                     </form>
                 </td>
             </tr>
             <% } %>
     </table>
+    
+    </div>
 
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const removeFlagButtons = document.querySelectorAll('.remove-flag-button');
+            const banUserButtons = document.querySelectorAll('.remove-user-button');
+    
+            removeFlagButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const confirmation = confirm("Are you sure you want to remove the flag for this user?");
+                    if (confirmation) {
+                        const form = event.target.closest('form');
+                        if (form) {
+                            form.submit();
+                        }
+                        alert("Flag removed successfully!");
+                    }
+                });
+            });
+    
+            banUserButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const confirmation = confirm("Are you sure you want to ban this user?");
+                    if (confirmation) {
+                        const form = event.target.closest('form');
+                        if (form) {
+                            form.submit();
+                        }
+                        alert("User banned successfully!");
+                    }
+                });
+            });
+        });
+    
+    </script>
+
 
 </body>
 
