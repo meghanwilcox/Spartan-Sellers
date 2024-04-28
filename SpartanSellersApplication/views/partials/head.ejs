@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/9f3edbf1ce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" />
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 
 </head>
 
@@ -19,27 +21,18 @@
                 <img src="/images/logo-white.png" alt="Logo" class="logo">
             </a>
         </div>
-
-        <p><%= user %></p>
-
         <nav>
-            <form action="/user/dataAll" method="GET">
-                <button type="submit" class="nav-button">View Pricing Info</button>
+            <p>
+                <%= user %>
+            </p>
+            <a class="profile" href="/user/profile"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
+            <form action="/user/sell" method="GET">
+                <button type="submit" class="nav-button">Sell</button>
             </form>
         </nav>
-
-        <nav>
-            <form action="/user/sellers" method="GET">
-                <button type="submit" class="nav-button">View Sellers</button>
-            </form>
-        </nav>
-
-        <nav>
-            <a class="profile" href="/user/profile"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>      
-        </nav>
-
-        
     </header>
+
+    
 
 
     <main>
@@ -49,57 +42,78 @@
             <div>
                 <div class="search-container">
                     <form action="/user/search" method="POST">
-                            <input type="text" class="search-bar" placeholder="Search" name="keyword">
-                            <button id="search-btn" type="submit">⌕</button>
+                        <button id="search-btn" type="submit">⌕</button>
+                        <input type="text" class="search-bar" placeholder="Search" name="keyword">
+
                     </form>
                 </div>
             </div>
 
             <ul class="category-list" id="sortable-list">
-                
-                <li class="category-item" >
-                    
+
+                <li class="category-item">
+
                     <form action="/user/filter" method="POST">
                         <input type="hidden" name="category" value="Dorm Supplies">
-                        <button type="submit" id="search-btn"><p class="category-item-text">Dorm Supplies</p></button>
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">Dorm Supplies</p>
+                        </button>
                     </form>
                     <i class="fa-solid fa-bed cat-icon"></i>
                 </li>
 
-                <li class="category-item" >
-                    
+                <li class="category-item">
+
                     <form action="/user/filter" method="POST">
                         <input type="hidden" name="category" value="Textbooks">
-                        <button type="submit" id="search-btn"><p class="category-item-text">Textbooks</p></button>
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">Textbooks</p>
+                        </button>
                     </form>
                     <i class="fa-solid fa-book cat-icon"></i>
                 </li>
 
-                <li class="category-item" >
-                    
+                <li class="category-item">
+
                     <form action="/user/filter" method="POST">
                         <input type="hidden" name="category" value="School Supplies">
-                        <button type="submit" id="search-btn"><p class="category-item-text">School Supplies</p></button>
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">School Supplies</p>
+                        </button>
                     </form>
                     <i class="fa-solid fa-pencil cat-icon"></i>
                 </li>
 
-                <li class="category-item" >
-                    
+                <li class="category-item">
+
                     <form action="/user/filter" method="POST">
                         <input type="hidden" name="category" value="Apparel">
-                        <button type="submit" id="search-btn"><p class="category-item-text">Apparel</p></button>
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">Apparel</p>
+                        </button>
                     </form>
                     <i class="fa-solid fa-shirt cat-icon"></i>
                 </li>
 
-                <li class="category-item" >
-                    
+                <li class="category-item">
+
                     <form action="/user/filter" method="POST">
                         <input type="hidden" name="category" value="Miscellaneous">
-                        <button type="submit" id="search-btn"><p class="category-item-text">Miscellaneous</p></button>
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">Miscellaneous</p>
+                        </button>
                     </form>
                     <i class="fa-solid fa-tag"></i>
+                </li>
+
+                <li class="category-item">
+
+                    <form action="/user/all" method="GET">
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">View All</p>
+                        </button>
+                    </form>
+                    <i class="fa-solid fa-ellipsis"></i>
                 </li>
             </ul>
         </div>

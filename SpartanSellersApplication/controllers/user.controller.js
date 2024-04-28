@@ -90,7 +90,7 @@ function listNewItem(req, res, next) {
       
       let params = [userName, itemName, itemPrice, description, condition, category, approval_status, sold];
        model.listNewItem(params);
-      res.redirect('/user/all');
+      res.redirect('/user/sell');
 
   } catch (err) {
       console.error("Error while creating item ", err.message);
@@ -266,6 +266,12 @@ function markSold(req, res, next){
 
 }
 
+// Function to render the admin bulk product upload page
+function sellPage(req, res) {
+  res.render('seller-page', {  title: 'Spartan Seller | Seller', user: req.session.currentUser.email, });
+}
+
+
 // Function to handle user logout
 function logout(req, res, next){
   req.session.currentUser = null;
@@ -290,5 +296,6 @@ module.exports = {
   leaveReview,
   generateProfile,
   markSold,
+  sellPage,
   logout
 };
