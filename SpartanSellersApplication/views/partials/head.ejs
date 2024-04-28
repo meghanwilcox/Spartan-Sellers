@@ -108,6 +108,18 @@
 
                 <li class="category-item">
 
+                    <form action="/user/filter" method="POST">
+                        <input type="hidden" name="category" value="Handmade">
+                        <button type="submit" id="search-btn">
+                            <p class="category-item-text">Handmade</p>
+                        </button>
+                    </form>
+                    <i class="fa-solid fa-hand"></i>
+                </li>
+
+
+                <li class="category-item">
+
                     <form action="/user/all" method="GET">
                         <button type="submit" id="search-btn">
                             <p class="category-item-text">View All</p>
