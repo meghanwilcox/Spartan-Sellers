@@ -1,21 +1,24 @@
 <%- include('./partials/alternate-head') %>
+
 <main class="product-details">
 
 
     <img class="pd-img" src="/images/<%= item.imageURL %>" alt="<%= item.itemName %>">
 
-    <div>
+    <div class="product-info">
 
         <h1 class="p-title"> <%= item.itemName %></h1>
 
-        <h2 id="item-price" > <%= item.itemPrice %> </h2>
+        <h2 id="item-price" > $<%= item.itemPrice %> </h2>
 
         <div class="product-info">
 
             <h2>Seller Information</h2>
             <p id="item-username"> <a class="seller-profile" href="/user/ratings/<%= email %>"><%= item.userName %></a></p>
 
-            <button class="seller-p-btn">Contact Seller </button>
+            
+
+            <button class="seller-p-btn" onclick="location.href='mailto:<%= email %>?subject=Sparten%20Seller%20|%20Interest%20in%20<%= item.itemName %>&body=Hello,%20I%20am%20interested%20in%20the%20<%= item.itemName %>%20that%20you%20have%20for%20sell.'">Contact Seller </button>
 
         </div>
 
@@ -43,3 +46,7 @@
 
             
 </html>
+
+   
+
+    

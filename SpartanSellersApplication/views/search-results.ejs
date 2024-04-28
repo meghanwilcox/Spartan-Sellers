@@ -4,9 +4,8 @@
     <div id="item-list">
         <% for (const item of items){ %>
             <div class="product-item">
-                <a href="/user/item-details/<%= item.itemID %>">
                     <img class="product-image" src="/images/<%= item.imageURL %>" alt="<%= item.name %>">
-                </a>
+                    <button class="view-item-btn" onclick="window.location.href='/user/item-details/<%= item.itemID %>'">View Item</button>
                 <h3><%= item.itemName %></h3>
                 <p>$<%= item.itemPrice %></p>
             </div>
