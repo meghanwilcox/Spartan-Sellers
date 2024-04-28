@@ -263,6 +263,7 @@ nav a {
     background-color: #f5a201;
     color: white;
     align-items: flex-end;
+    
 } 
 
 .remove-flag-button{
@@ -277,14 +278,32 @@ nav a {
     color: white;
     align-items: flex-end;
 } 
-.item-to-be-approved {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+
+.deny-item-button{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
     border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
+}
+
+
+.item-to-be-approved {
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5a201;
+    color: white;
+    align-items: flex-end;
 }
 
 .user-to-be-approved {
@@ -340,15 +359,7 @@ nav a {
     align-items: center;
 }
 
-.item-to-be-approved {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 75%;
-    border: 5px solid gray;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
+
 
 /* ######################### Search Bar Styles ######################### */
 #search-btn{

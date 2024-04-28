@@ -38,12 +38,12 @@
                 </td>
                 <td>
                     <form action="/admin/approve/<%= item.itemID %>" method="POST">
-                        <button type="submit">Approve</button>
+                        <button class="item-to-be-approved" type="submit">Approve</button>
                     </form>
                 </td>
                 <td>
                     <form action="/admin/remove/<%= item.itemID %>" method="POST">
-                        <button type="submit">Remove</button>
+                        <button class="deny-item-button" type="submit">Remove</button>
                     </form>
                 </td>
             </tr>
@@ -51,6 +51,44 @@
     </table>
 
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const approveButtons = document.querySelectorAll('.item-to-be-approved');
+        const removeButtons = document.querySelectorAll('.deny-item-button');
+
+        approveButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const confirmation = confirm("Are you sure you want to approve this item?");
+                if (confirmation) {
+                    const form = event.target.closest('form');
+                    if (form) {
+                        form.submit();
+                    }
+                    alert("Item listed successfully!");
+                }
+            });
+        });
+
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const confirmation = confirm("Are you sure you want to remove this item?");
+                if (confirmation) {
+                    const form = event.target.closest('form');
+                    if (form) {
+                        form.submit();
+                    }
+                    alert("Item removed successfully!");
+                }
+            });
+        });
+    });
+</script>
+
+
+
 
 </body>
 
