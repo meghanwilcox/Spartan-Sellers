@@ -1,38 +1,45 @@
 <%- include('./partials/alternate-head') %>
-        <hr>
-            <div id="container2">
-                <div class="card-holder" id="item">
-                    <h3>
-                        <%= item.itemName %>
-                    </h3>
-                    <p><%= item.category %></p>
-                    <p><%= item.description %></p>
-                    <p>$<%= item.itemPrice %></p>
-                    <p>Listed By:</p>
-                    <a href="/user/ratings/<%= email %>">
-                        <%= email %>
-                    </a>
-                </div>
-    
-            <div id="contact-seller">
-                <form action="mailto:<%= email %>" method="post" enctype="text/plain">
-                    <label>Contact the Seller</label><br><br>
-                    <label>Subject:</label>
-                    <input type="text" id="subject" name="subject" value="Interest in <%= item.itemName %>" required><br><br>
-                    <label>Body:</label>
-                    <textarea id="body" name="body" required>Hello! I am interested in purchasing your item, <%= item.itemName %>! Best, <%= name %></textarea><br><br>
-                    <input type="submit" class="nav-button" value="Send">
-                </form>
-            </div>
+<main class="product-details">
+
+
+    <img class="pd-img" src="/images/<%= item.imageURL %>" alt="<%= item.itemName %>">
+
+    <div>
+
+        <h1 class="p-title"> <%= item.itemName %></h1>
+
+        <h2 id="item-price" > <%= item.itemPrice %> </h2>
+
+        <div class="product-info">
+
+            <h2>Seller Information</h2>
+            <p id="item-username"> <a class="seller-profile" href="/user/ratings/<%= email %>"><%= item.userName %></a></p>
+
+            <button class="seller-p-btn">Contact Seller </button>
+
         </div>
 
-    </main>
+        <div class="product-info">
 
+            <h2>Product Information</h2>
+
+            <p id="item-description"> <%= item.description %> </p>
+
+            <p id="item-condition"> <%= item.condition %> </p>
+
+            <p id="item-category"> <%= item.category %> </p>
+
+        </div>
+
+    </div>
+</main>
+
+   
 
     <footer>
         <p>Copyright © 2024 Spartan Sellers</p>
     </footer>
+    </body>
 
-</body>
-
+            
 </html>

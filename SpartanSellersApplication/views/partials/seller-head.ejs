@@ -22,15 +22,32 @@
                 <img src="/images/logo-white.png" alt="Logo" class="logo">
             </a>
         </div>
+
+        <p><%= user %></p>
+
         <nav>
-            <p>
-                <%= user %>
-            </p>
-            <a class="profile" href="/user/profile"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>
-            <form action="/user/sell" method="GET">
-                <button type="submit" class="nav-button">Sell</button>
+            <form action="/user/dataAll" method="GET">
+                <button type="submit" class="nav-button">View Pricing Info</button>
             </form>
         </nav>
+
+        <nav>
+            <form action="/user/sellers" method="GET">
+                <button type="submit" class="nav-button">View Sellers</button>
+            </form>
+        </nav>
+
+        <nav>
+            <a class="profile" href="/user/profile"> <i class="fa-solid fa-user nav-icon"></i>Profile</a>      
+        </nav>
+
+        <nav>
+            <form action="/user/all" method="GET">
+                <button type="submit" class="nav-button">Buy</button>
+            </form>
+        </nav>
+
+        
     </header>
 
 

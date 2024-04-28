@@ -1,0 +1,63 @@
+<%- include('./partials/seller-head') %>
+
+<div id="container2">
+        <div id="p-container">
+
+        
+        <div id="form-cont">
+            <form id="form2" action="/user/new" method="POST">
+                <h3>List a New Product For Sale</h3>
+                <br>
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Name" name="itemName">
+                </div>
+                <br>
+                <div>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="Dorm Supplies">Dorm Supplies</option>
+                        <option value="Textbooks">Textbooks</option>
+                        <option value="School Supplies">School Supplies</option>
+                        <option value="Apparel">Apparel</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="condition">Condition:</label>
+                    <select id="condition" name="condition">
+                        <option value="Poor">Poor</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Good">Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="price">Price</label>
+                    <input id="price" type="number" min="0" step="0.01" placeholder="Price" name="itemPrice">
+                </div>
+                <br>
+                <div>
+                    <label for="description">Description</label>
+                    <input id="description" type="text" placeholder="Description" name="description">
+        
+                </div>
+                <br>
+                <button id="save-product" type="submit" class="nav-button">Submit</button>
+            </form>
+        </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Copyright © 2024 Spartan Sellers</p>
+    </footer>
+
+</body>
+
+</html>

@@ -20,5 +20,6 @@ router.post("/makeReview", userController.leaveReview);
 router.get("/profile", userController.generateProfile);
 router.post("/sold", userController.markSold);
 router.post("/logout", userController.logout);
+router.get("/sell", userController.sellPage);
 
 module.exports = router;
