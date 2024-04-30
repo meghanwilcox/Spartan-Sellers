@@ -11,6 +11,15 @@ The SpartanSellers Campus Marketplace Application is an application that allows 
 
 ![use-case-diagram](https://github.com/meghanwilcox/Spartan-Sellers/assets/139730229/35040dcd-7fb9-4647-a0a6-c4bb392c5027)
 
+How To Run:
+
+1. Through the 'SpartenSellersApplication' folder download all dependencies with 'npm install'
+2. Start the server through the 'SpartenSellersApplication' folder with 'npm start'
+3. In your browser enter 'http://localhost:8000/'
+4. Login as a user with any of the following usernames alliWeavil, carissaBoddie, meghanWilcox. The password for all accounts is 'password'
+5. Login as an admin with Username: admin Password: password
+   
+
 
 
 
