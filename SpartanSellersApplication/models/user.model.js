@@ -14,7 +14,7 @@ function getAll() {
 // Function to retrieve user by username
 function getUserByUsername(params){
   // SQL query to select user by username
-  let sql = 'SELECT * FROM user WHERE userName = ?;';
+  let sql = 'SELECT * FROM User WHERE userName = ?;';
   // Executing the query with provided parameters
   const response = db.all(sql, params);
   return response;
